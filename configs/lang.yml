@@ -1,0 +1,1842 @@
+###########################################
+#                                         #
+#        LANGUAGE CONFIGURATION           #
+#           LANGUAGE: DUTCH               #
+#             VERSION: 4.5                #
+#                                         #
+###########################################
+
+Global:
+    NoMembers: "Geen leden"
+    InvalidUser: "Geef een geldige gebruiker op"
+    None: "Geen"
+    Page: "Pagina"
+    Never: "Nooit"
+    Unlimited: "Ongelimiteerd"
+    Yes: "Ja"
+    No: "Nee"
+    Unknown: "Onbekend"
+    ClickHere: "Klik hier"
+    Image: "Image"
+
+GiveawaySystem:
+    GiveawayEnded:
+        Winners:
+            Title: ":tada: Winactie Afgelopen"
+            Description: "De [{name}]({url}) winactie is afgelopen! Proficiat aan de winnaars: {winners}"
+        NoWinners:
+            Title: ":tada: Winactie Afgelopen"
+            Description: "De [{name}]({url}) winactie is afgelopen!, maar er zijn geen winnaars omdat niemand meedeed!"
+    Requirements:
+        Coins: "\n> Je moet op zijn minst **{amount}** munten hebben"
+        XP: "\n> Je moet op zijn minst **{amount}** ervaring hebben"
+        Level: "\n> Je moet op niveau **{level}** zijn of hoger"
+        Server: "\n> Je moet in de **{server-name}** discord zitten. [Klik hier om deel te nemen!]({server-invite})"
+        Roles:
+            CantHave:
+                One: "\n> Je kunt niet de {role} role hebben"
+                Multiple: "\n> U kunt niet een van de volgende rollen hebben: {roles}"
+            MustHave:
+                One: "\n> Je moet de {role} role hebben"
+                Multiple: "\n> Je moet de volgende rollen hebben: {roles}"
+        Messages: "\n> Je moet minimaal **{amount}** berichten hebben verzonden"
+    FailedRequirements:
+        Coins: "> Je hebt geen **{coins}** munten (Je hebt **{needed}** meer nodig)"
+        XP: "> Je hebt geen **{xp}** ervaring (Je hebt **{needed}** meer nodig)"
+        Level: "> Je hebt level **{level}** nog niet bereikt (je hebt nog **{needed}** levels nodig)"
+        Server: "> U bevindt zich niet op de **{server-name}** server. [Klik hier om mee te doen!]({url})"
+        Roles:
+            CantHave: "> U kunt geen van de volgende rollen hebben: {roles}"
+            MustHave: "> Je moet de volgende rollen hebben: {roles}"
+        Messages: "> Je hebt geen **{message-count}** berichten verzonden (Je hebt nog **{needed}** meer nodig)"
+    CantParticipate:
+        Title: "Winactie"
+        Description: "Je mag niet deelnemen aan de [{name}]({url}) winactie!\n\n**Je hebt niet voldaan aan de volgende vereisten:**\n{failed-requirements}"
+    Joined:
+        Title: "Winactie"
+        Description: "Je hebt meegedaan aan de [{name}]({url}) Winactie (**x{amount}** inzendingen). Veel geluk!"
+    Left:
+        Title: "Winactie"
+        Description: "Je hebt de [{name}]({url}) winactie verlaten"
+    LeftRequiredServer:
+        Title: "Winactie"
+        Description: "Je bent verwijderd uit de [{name}]({url}) Winactie sinds je de [{server-name}]({server-link}) server hebt verlaten"
+    ExtraEntries: "{role} ontvang {amount} inzendingen"
+    Commands:
+        Gcreate:
+            Questions:
+                - "Wat is de winactie (de prijs die je weggeeft)?"
+                - "Wat wil je dat de omschrijving van de winactie is?\n\nReageer met **no** voor geen omschrijving."
+                - "Hoe lang duurt de winactie?"
+                - "Hoeveel winnaars zullen er zijn?"
+                - "Op welk kanaal wil je dat de winactie wordt gehost?\n\nReageer met **here** om het in dit kanaal te hosten, of reageer met **#kanaalnaam** om het op een ander kanaal te hosten."
+                - "Noem de gastheer van de winactie, of zeg: **me**"
+                - "Wil je graag een winactie-wens?"
+            Create:
+                Title: ":tada: Maak een Winactie"
+                Footer: 'Stap {current-step}/{max-steps} | Zeg "cancel" om de setup te annuleren'
+            Invalid:
+                Time: "Dat is geen geldige tijd. Voorbeeld: 1d1h30m"
+                Number: "Dat is geen geldig nummer."
+                Channel: 
+                    - 'Dat is geen geldig kanaal. Noem een ​​kanaal of zeg "here"'
+                    - "Dat is geen geldig kanaal in de vereiste server"
+                Member: 'Dat is geen geldig lid. Vermeld een lid of zeg "me"'
+                Guild: "Dat is geen geldig Server-ID, of de bot staat niet op die server."
+            Requirements:
+                Title: ":tada: Maak een Winactie | Voorwaarden"
+                Description: 
+                    Coin:
+                        - ":one: **Een vereiste voor aantal munten toevoegen**"
+                        - ":one: **Muntvereiste::** {coins}"
+                    XP: 
+                        - "\n\n:two: **Een XP-vereiste toevoegen**"
+                        - "\n\n:two: **XP-vereiste::** {xp}"
+                    Level:
+                        - "\n\n:three: **Een niveau vereiste toevoegen**"
+                        - "\n\n:three: **Niveauvereiste:** {level}"
+                    Server:
+                        - "\n\n:four: **Een serververeiste toevoegen**"
+                        - "\n\n:four: **Serververeiste:**\n> Moet in de **{server-name}** ({server-id}) server zitten"
+                    Roles:
+                        - "\n\n:five: **Rolvereisten beheren**"
+                        - "\n\n:five: **Rolvereisten:**\n> __Kan niet hebben:__ {roles-cant}\n> __Moet hebben:__ {roles-must}"
+                    Messages:
+                        - "\n\n:six: **Voeg een vereiste voor het aantal berichten toe**\n\n**Reageer met :white_check_mark: wanneer u klaar bent met het bewerken van de vereisten**\n\n**Reageer met :x: om het proces te annuleren**"
+                        - "\n\n:six: **Vereiste voor aantal berichten:** {message-count}\n\n**Reageer met :white_check_mark: wanneer u klaar bent met het bewerken van de vereisten**\n\n**Reageer met:x: om het proces te annuleren**"
+                Footer: 'Zeg "canncel" om het toevoegen van deze vereiste te annuleren'
+                Questions:
+                    - "Stuur de ID van de server, die gebruikers moeten hebben om deel te nemen"
+                    - "Stuur de kanaalnaam/-ID waarvoor je de uitnodiging wilt maken"
+                    - 'Noem de rollen die de gebruiker **NIET** mag hebben om deel te nemen aan de winactie, of zeg "none"'
+                    - 'Noem de rollen die de gebruiker **MOET** heeft om deel te nemen aan de winactie, of zeg "none"'
+                    - 'Hoe moet {type} verplicht zijn om deel te nemen aan de Winactie??'
+                Coins: "veel munten"
+                XP: "veel XP"
+                Level: "veel levels"
+                Messages: "veel berichten verzonden"
+            Created:
+                Title: ":tada: Winactie gemaakt!"
+                Description: "De winactie is [hier]({url}) aangemaakt! Het eindigt op **{date}**."
+            Canceled: "Maken van winactie geannuleerd"
+            InviteError: "Er is een fout opgetreden bij het maken van een uitnodiging voor dat kanaal. Probeer het opnieuw"
+        Gdelete:
+            Title: "Winactie verwijderd"
+            Description: "De [{name}]({link}) winactie is verwijderd uit de database"
+        Gedit:
+            ThisGiveaway:
+                Title: ":tada: Een Winactie bewerken"
+                Description: "Is [dit]({link}) de winactie die je wilt bewerken??"
+            Canceled: "Bewerken van winactie geannuleerd"
+            Questions:
+                - "Wat wil je dat de nieuwe prijs wordt?"
+                - "Wat wil je dat de nieuwe beschrijving wordt?\n\nZeg \"none\" om de beschrijving te verwijderen"
+                - "Wanneer wil je dat de winactie afloopt?"
+                - "Hoeveel winnaars zullen er zijn?"
+                - "Wie is de nieuwe gastheer?"
+            Edit:
+                Title: ":tada: Een Winactie bewerken"
+                Description:
+                    Prize:
+                        - "**:one: Verander de prijs**"
+                        - "**:one: Verander de prijs**\n> __Nieuwe prijs:__ {prize}"
+                    Description:
+                        - "\n\n**:two: Wijzig de beschrijving**"
+                        - "\n\n **:two: Wijzig de beschrijving** \n> __Nieuwe beschrijving:__ {description}"
+                    Date:
+                        - "\n\n**:three: Wijzigen wanneer de winactie eindigt**"
+                        - "\n\n **:three: Wijzigen wanneer de winactie eindigt**\n> __Nieuwe datum:__ {date}"
+                    Winners:
+                        - "\n\n**:four: Change the amount of winners**"
+                        - "\n\n**:four: Change the amount of winners**\n> __New amount:__ {amount}"
+                    Host:
+                        - "\n\n**:five: Verander de host**"
+                        - "\n\n **:five: Verander de host**\n> __Nieuwe gastheer:__ {host}"
+                    Requirements:
+                        - "\n\n**:six: Wijzig de vereisten\n\nReageren met :white_check_mark: om het bewerken te voltooien\n\nReageer met :x: om het bewerkingsproces te annuleren**"
+                        - "\n\n **:six: Wijzig de vereisten**\n> __Nieuwe vereisten:__\n{requirements}\n\n **Reageer met :white_check_mark: om het bewerken te voltooien \n\n Reageer met :x: om het bewerkingsproces te annuleren**"
+                RequirementsList:
+                    - "Kan niet hebben: {roles}"
+                    - "Moet hebben: {roles}"
+                    - "**{server-name}** Server"
+                    - "**{amount}** ervaring"
+                    - "**{amount}** munten"
+                    - "**{amount}** levels"
+                    - "**{amount}** Aantal berichten"
+                Footer: 'Zeg "cancel" om het bewerkingsproces te annuleren'
+            Requirements:
+                Title: ":tada: Een Winactie bewerken | Voorwaarden"
+                Description:
+                    Coins:
+                        - ":one: **Wijzig de vereiste munten**\n> __Momenteel:__ {coins} munten"
+                        - ":one: **Wijzig de vereiste munt**\n> __Momenteel:__ Geen vereiste"
+                    XP:
+                        - "\n\n:two: **Verander de XP-vereiste**\n> __Momenteel:__ {xp} ervaring"
+                        - "\n\n:two: **Wijzig de XP-vereiste**\n> __Momenteel:__ Geen vereiste"
+                    Level:
+                        - "\n\n:three: **Wijzig de vereiste niveau**\n> __Momenteel:__ niveau {niveau}"
+                        - "\n\n:three: **Wijzig de vereiste niveau**\n> __Momenteel:__ Geen vereiste"
+                    Server:
+                        - "\n\n:four: **Wijzig de serververeiste**\n> __Momenteel:__ Moet in de **{server-name}** server zijn"
+                        - "\n\n:four: **Wijzig de serververeiste**\n> __Momenteel:__ Geen vereiste"
+                    Roles: 
+                        - "\n\n:five: **Wijzig de rolvereisten**\n> __Momenteel:__\n> Moet hebben: {roles-must}\n> Kan niet hebben: {roles-cant}"
+                        - "\n\n:five: **Wijzig de rolvereisten**\n> __Momenteel:__ Geen vereiste"
+                    Messages: 
+                        - "\n\n:six: **Wijzig de berichtvereisten**\n> __Momenteel:__ {berichten} verzonden berichten\n\n**Reageer met :white_check_mark: wanneer u klaar bent met het bewerken van de vereisten**\n\n**Reageer met :x: om bewerkingsvereisten annuleren**"
+                        - "\n\n:six: **Wijzig de berichtvereisten**\n> __Momenteel:__ Geen vereiste\n**Reageer met :white_check_mark: wanneer u klaar bent met het bewerken van de vereisten**\n\n**Reageer met :x: om de bewerkingsvereisten te annuleren**"
+            Edited:
+                Title: ":pencil2: Winactie bewerkt"
+                Description: "De [{name}]({url}) winactie is aangepast."
+        Giveaways:
+            Title: ":tada: Winactie's"
+            Fields:
+                - "Maak een winactie"
+                - "Een Winactie bewerken"
+                - "Schema van de winactie bekijken"
+                - "Stop een winactie"
+                - "Een winactie opnieuw uitrollen"
+                - "Een winactie verwijderen"
+        Greroll:
+            Title: "🔄 Winactie opnieuw uitgerold"
+            Description: "De [{name}]({link}) winactie is opnieuw uitgerold! Omdat de oude winnaar(s) hun prijs niet hebben opgehaalt. Proficiat aan de nieuwe winnaars: {winners}"
+        Gschedule:
+            Title: ":calendar_spiral: Schema van de Winactie"
+            Format: "[{name} Giveaway]({link})\n> Eindigt op `{date}` (*{timer}*) met **{amount}** {winners}"
+            Winners:
+                Plural: "winnaars"
+                Singular: "winnaar"
+        Gstop:
+            Title: "Winactie beëindigd"
+            Description: "De [{name}]({link}) winactie is geforceerd beëindigd"
+    Errors:
+        UnknownGiveaway: "Er is geen winactie gevonden met die naam of ID"
+        NoGiveaways: "Er zijn momenteel geen winacties"
+        NotEnded: "Deze winactie is nog niet afgelopen"
+        NoOneEntered: "Er zijn geen andere deelnemers aan de winactie"
+        NoGiveawaysRunning: "Er lopen momenteel geen winacties"
+        AlreadyEnded: "Die winactie is al afgelopen"
+
+FilterSystem:
+    Commands:
+        Filter:
+            Help:
+                Title: "Help-menu"
+                Description: "Met het filtersysteem kunt u woorden of woordgroepen op de zwarte lijst zetten die in de chat worden verzonden. Als een bericht een gefilterd woord/zin bevat, wordt het bericht verwijderd."
+                Fields:
+                    - Name: "**Lijst**"
+                      Value: "-filter list"
+                    - Name: "**Toevoegen**" 
+                      Value: "-filter add <woord/zin|woorden/zinnen gescheiden door komma>"
+                    - Name: "**Verwijderen**"
+                      Value: "-filter remove <<woord/zin|woorden/zinnen gescheiden door komma>>"
+            List:
+                Title: "Woorden op de zwarte lijst (pagina {current-page}/{max-pages})"
+                Description: "**Berichten met de volgende woorden/zinnen worden verwijderd:**\n{words}"
+            Add:
+                WordAlreadyInFilter: 
+                    - "Dat woord/zin staat al in het filter."
+                    - "Die woorden/zinnen staan al in het filter."
+                Title: "Woord toegevoegd"
+                Description: 
+                    - "Het woord/zin ``{word}`` is toegevoegd aan het filter."
+                    - "De woorden/zinnen {words} zijn toegevoegd aan het filter."
+            Remove:
+                InvalidWord: 
+                    - "Dat woord/de zin staat niet in het filter"
+                    - "Die woorden/zinnen staan niet in het filter"
+                Title: "Woord verwijderd"
+                Description: 
+                    - "Het woord/zin ``{word}`` is uit het filter verwijderd."
+                    - "De woorden/zinnen {words} zijn uit het filter verwijderd."
+    MessageFilter:
+        Title: "**BERICHT FILTER**"
+        Fields: 
+            - "Filternaam"
+            - "Bericht"
+            - "Link naar bericht"
+            - "Bericht Auteur"
+    Filter:
+        Title: "Dat woord of die zin staat op de zwarte lijst! Zeg het alsjeblieft niet."
+    FilterSystem: "Filtersysteem"
+
+GeneralModule:
+    Commands:
+        Rank:
+            You:
+                Title: "🎖️ Jouw ranglijst"
+                Fields:
+                    - Name: "Muntenklassement"
+                      Value: 
+                        - "Je bent gerangschikt **#{rank}** op het muntenklassement"
+                        - "Je staat niet in het klassement omdat je geen munten hebt"
+                    - Name: "Niveauklassement"
+                      Value:
+                        - "Je bent gerangschikt **#{rank}** op het level leaderboard"
+                        - "Je staat niet in het klassement omdat je geen XP hebt"
+                    - Name: "Klassement voor berichtentelling"
+                      Value:
+                        - "Je bent gerangschikt **#{rank}** op het leaderboard voor het tellen van berichten"
+                        - "Je bent niet gerangschikt in het leaderboard omdat je geen normale berichten hebt verzonden"
+                    - Name: "Spraak tijd klassement"
+                      Value:
+                        - "Je bent gerangschikt **#{rank}** op het Spraak tijd klassement"
+                        - "Je bent niet gerangschikt in het klassement omdat je geen tijd in een spraakkanaal hebt doorgebracht"
+            SomeoneElse:
+                Title: 🎖️ {user}'s ranglijst
+                Fields:
+                    - Name: "Muntenklassement"
+                      Value:
+                        - "{user} is gerangschikt **#{rank}** op het muntenklassement"
+                        - "{user} is niet gerangschikt"
+                    - Name: "Niveauklassement"
+                      Value:
+                        - "{user} is gerangschikt **#{rank}** op het level klassement"
+                        - "{user} is niet gerangschikt"
+                    - Name: "Klassement voor berichtentelling"
+                      Value:
+                        - "{user} is gerangschikt **#{rank}** op het leaderboard voor het tellen van berichten"
+                        - "{user} is niet gerangschikt"
+                    - Name: "Spraak tijd klassement"
+                      Value:
+                        - "{user} is gerangschikt **#{rank}** op het Spraak tijd klassement"
+                        - "{user} is niet gerangschikt"
+        Remindme:
+            List:
+                NoReminders:
+                    Title: "⏲️ Herinneringen"
+                    Description: "Je hebt momenteel **0** herinneringen!"
+                Reminders:
+                    Title: "⏲️ Herinneringen"
+                    Format:
+                        - "ID: {id}"
+                        - "**Herinnering:** {description}\n**Gaat af in:** {timer}"
+            Cancel:
+                NoReminders: "Je hebt geen herinneringen om te annuleren"
+                InvalidID: "Dat is geen geldig herinnerings-ID"
+                Canceled:
+                    Title: "❌ Herinnering geannuleerd"
+                    Description: "U heeft uw `{reminder}` herinnering geannuleerd!"
+            Set:
+                InvalidTime: "Geef een geldig tijdformaat EX op: 1m20s, 5s, 1d5h, etc."
+                InvalidReminder: "Geef a.u.b. op waar u aan herinnerd wilt worden"
+                ReminderSet:
+                    You:
+                        Title: "⏲️ Herinnering ingesteld"
+                        Description: "Herinnering ingesteld! U wordt herinnerd aan '{reminder}' in **{timer}**"
+                    SomeoneElse:
+                        Title: "⏲️ Herinnering ingesteld"
+                        Description: "Herinnering ingesteld! {user} wordt herinnerd aan '{reminder}' in **{timer}**"
+            Help:
+                Title: "⏳ Herinneringen"
+                Description: "Wil je niets vergeten? Stel een herinnering in en ontvang een herinnering wanneer u iets gedaan moet krijgen!"
+                Fields:
+                    - "**Uw herinneringen op een rij**"
+                    - "**Maak een herinnering**"
+                    - "**Een herinnering annuleren**"
+        Suggest:
+            ReactToOwnSuggestion: "U kunt niet stemmen op uw eigen suggestie."
+        Verify:
+            Errors:
+                InvalidCode: "Dat was een ongeldige verificatie code! Gelieve het verificatieproces opnieuw uit te voeren!"
+                DMsLocked: "Ik kon je de code niet in DM's sturen omdat je DM's vergrendeld zijn. Open ze alsjeblieft en doe het verificatieproces opnieuw!"
+                ErrorOccured: "Er is een fout opgetreden tijdens het verzenden van een bericht. Probeer het later nog eens."
+                WrongChannel: "Je kunt dit commando niet in dit kanaal uitvoeren."
+            Embeds:
+                Code:
+                    Title: "Verificatie Code"
+                    Description: "Uw verificatie code is: `{code}` Stuur alleen deze code in het {channel} kanaal om geverifieerd te worden!"
+            Sent: "Check je DM's voor een verificatiecode!"
+        Tempchannels:
+            Errors:
+                NoTC: "Je hebt geen tijdelijk kanaal."
+                NoLongerHave: "Je hebt niet langer een tijdelijk kanaal."
+                TCDleted: "Je temp kanaal werd verwijderd."
+                FinishCurrentAction: "Maak je huidige temp channel actie af voordat je een andere actie probeert uit te voeren."
+                NoPermission: "Ik heb geen rechten om kanalen te bewerken. Neem contact op met een server beheerder"
+            Manager:
+                Title: "Tijdelijk Kanaal Manager"
+                Fields:
+                    - "**Kanaal Naam:**⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+                    - "**Publiek:**⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+                    - "**Toegestane gebruikers:**⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+                    - "**Max. leden:**"
+                    - "👑 Overdracht Eigendom"
+                    - "🔐 Privé maken"
+                    - "🔓 Maak openbaar"
+                    - "🚫 Wijzig toegestane gebruikers"
+                    - "🎚️ Verander Max Leden"
+                    - "✏️ Kanaalnaam wijzigen"
+                SessionEnded: "Tijdelijke Kanaal manager | Sessie beëindigd"
+                NoMaxMembers: "Onbeperkt"
+            TransferOwnership:
+                Errors:
+                    TransferToBot: "U kunt geen eigendom overdragen aan een bot"
+                    NotInTC: "U moet de eigendom overdragen aan iemand die al in het uitzendkanaal zit"
+                    NoMention: "U moet een gebruiker noemen om het eigendom over te dragen aan"
+                Questions: "Vermeld de gebruiker aan wie u de eigendom wilt overdragen. Zeg 'cancel' om dit proces te annuleren."
+                Canceled: "❌ Overdracht van eigendom geannuleerd"
+                Transferred: "👑 Eigendom overgedragen!"
+                Notification: "👑 {new-owner} Je bent nu de eigenaar van {old-owner}'s tijdelijke kanaal!"
+            ChangeLimit:
+                Errors:
+                    InvalidResponse: "Het antwoord moet een getal zijn of 'none'"
+                    InvalidRange: "De gebruikerslimiet moet een getal tussen 2-99 zijn"
+                Question: "Wat wilt u veranderen aan de gebruikerslimiet? Antwoord met 'none' voor geen limiet. Min 2 personen en max 99 personen."
+                Updated: "🎚️ Bijgewerkte max gebruikers!"
+            ChangeName:
+                Errors:
+                    Filter: "U kunt geen gefilterde woorden gebruiken in de kanaalnaam."
+                    AntiAd: "Je kunt geen reclame in je kanaalnaam hebben."
+                Question: "Waar zou je de naam in willen veranderen?"
+                Updated: "✏️ Bijgewerkte kanaalnaam!"
+            MakePrivate:
+                Errors:
+                    InvalidResponse: "Gelieve gebruikers te vermelden of te antwoorden met 'none'"
+                Question: "Vermeld de gebruikers die u toegang wilt geven tot dit tijdelijke kanaal of zeg 'none' voor geen gebruikers.\n\n Aantekening: De bot krijgt automatisch toegang."
+                Privated: "🔐 Je tijdelijke kanaal is nu privé!"
+            MakePublic:
+                Public: "🔓 Je tijdelijke kanaal is nu openbaar!"
+            ChangeUsers:
+                Errors:
+                    AlreadyAdded: "Al deze gebruikers zijn al toegevoegd aan uw tijdelijke kanaal"
+                    InvalidResponse: "Gelieve een of meer gebruikers te vermelden"
+                    CantRemoveUsers: "U kunt deze gebruikers niet verwijderen."
+                Questions:
+                    - "Wilt u gebruikers toevoegen of verwijderen?"
+                    - "Tag de gebruikers die je wilt toevoegen aan het tijdelijke kanaal"
+                    - "Tag de gebruikers die je wilt verwijderen uit het tijdelijke kanaal"
+                Updated: "✅ Bijgewerkte toegestane gebruikers!"
+                
+MinecraftModule:
+    Commands:
+        BugReports:
+            InvalidChannel: "Je kunt dat commando niet in dit kanaal uitvoeren"
+        Mcuser:
+            Errors:
+                InvalidUsername: "Dat is geen geldige Minecraft gebruiker"
+            UserInfo:
+                Title: "Minecraft Gebruikersinformatie - {user-name}"
+                Fields:
+                    - "Name History"
+                    - "UUID"
+                    - Name: "Name MC Link"
+                      Value: "[Click Here]({namemc-link})"
+                Image: "{user-image}"
+            FetchingData: "*Gegevens ophalen...*"
+        Server:
+            Errors:
+                ErrorOccured: "Er is een fout opgetreden tijdens een poging om informatie van deze server op te vragen."
+            Server:
+                Title: "Minecraft Server: {server-ip}"
+                Fields:
+                    - "Description"
+                    - Name: "Players"
+                      Value: "Online: {online}\nMax: {max}"
+                    - "Version"
+                Footer: "Minecraft Server Information"
+                FooterIcon: "https://i.ya-webdesign.com/images/minecraft-png-files-7.png"
+        Status:
+            Errors:
+                CouldntFetchList: "Error: Kon de spelerslijst niet ophalen"
+                CouldntFetchVersion: "Error: Kon server versie niet ophalen"
+                InvalidServer: "Dat is geen geldige server"
+            LoadingStatus: "Status van de server wordt geladen... Dit kan een paar seconden duren."
+            Error: "Error"
+            Embeds:
+                SpecificStatus:
+                    Title: "{server}"
+                    Fields: 
+                        - "Online Players"
+                        - "Players"
+                        - "Version"
+                GlobalStatus:
+                    Title: "**Example Network Server Status**"
+                    Online: 
+                        - "**{server}:**"
+                        - "{playercount} player(s)"
+                    Offline: 
+                        - "**{server}:**"
+                        - "Offline"
+
+CoinModule:
+    Commands:
+        Buy:
+            Errors:
+                InvalidItem: "**Ongeldig item!** Geldige items zijn: {validitems}"
+                AlreadyPurchased: "U heeft dit artikel al gekocht"
+                RoleRequired: "Je hebt de rol ({role}) niet."
+                LevelRequired: "Je moet minstens level ``{required_level}`` hebben om dit item te kunnen kopen. Je bent alleen level ``{level}``."
+            Embeds:
+                ItemPurchased:
+                    Title: "👜 Aangekocht artikel"
+                    Description: "U heeft met succes **{item}** gekocht voor **{price}** munten"
+            ShopDisabled: "De winkel is momenteel gesloten of niet beschikbaar"
+        Coins:
+            Embeds:
+                YourCoins:
+                    Title: "Uw munten"
+                    Description: "U heeft momenteel **{coins}** munten"
+                UserCoins:
+                    Title: "{user}'s Munten"
+                    Description: "{user} heeft momenteel **{coins}** munten"
+        Daily:
+            Cooldown: "Je moet **{time}** wachten tot je je dagelijkse munten weer kunt claimen!"
+            Collected: "💰 Je hebt met succes je dagelijkse {coins} munten opgeëist"
+        Pay:
+            Errors:
+                PaySelf: "Je kunt jezelf geen geld sturen"
+                PayBot: "Je kunt geen munten naar een bot sturen"
+                InvalidAmount: "Geef een geldig aantal munten om te verzenden"
+            Embed:
+                Title: "💸 Transactie voltooid"
+                Description: "U heeft met succes {amt} munten naar {user} gestuurd"
+                Fields: 
+                    - ":arrow_down: Uw munten"
+                    - ":arrow_up: Hun munten"
+        Slots:
+            Errors:
+                InvalidAmount: "Dat is een ongeldig aantal munten."
+                AtLeast10Coins: "Je moet ten minste 10 munten inzetten."
+            Embed:
+                Title: "🎰 Gokkasten"
+                Description: "{user} Gegokt {gambled} munten en heeft **{recieved}** munten {extra} teruggekregen !"
+                Fields:
+                    - "Gokautomaat"
+                    - "Gewonnen"
+                    - "Verloren"
+                    - "{amount} munten"
+                Extra: "**({original} x {multiplier} muntvermenigvuldigingsfactor)**"
+        Weekly:
+            Cooldown: "Je moet **{time}** wachten tot je je wekelijkse munten weer kunt claimen!"
+            Collected: "💰 U heeft met succes uw wekelijkse {coins} munten opgeëist"
+        Work:
+            Errors:
+                InvalidJobSetup: "Niet alle jobs zijn juist ingesteld. Controleer de console."
+                NoJob: "Je hebt momenteel geen baan! Gelieve er een aan te vragen om te beginnen werken."
+                WorkCooldown: "Je moet **{time}** wachten tot je weer kunt werken!"
+                AlreadyHaveJob: "Je moet je baan opgeven voordat je bij een nieuwe solliciteert! Gebruik {prefix}work quit"
+                InvalidJob: "Geef een geldige baan op. Run {prefix}work jobs om een volledige lijst van banen te zien"
+                ApplyCooldown: "Je moet **{time}** wachten tot je weer kunt solliciteren!"
+                FailedRequirements: "Je voldoet niet aan de eisen voor deze baan!"
+                ConsiderApplying: "⚠️ Je hebt momenteel geen baan. Overweeg er een te zoeken!"
+            Embeds:
+                Help:
+                    Title: "👨‍⚕️ Werk"
+                    Description: "Wil je sneller munten verdienen? Ga voor een baan en werk voor geld!"
+                    Fields:
+                        - "**Bekijk een lijst met banen**"
+                        - "**Solliciteer naar een baan**"
+                        - "**Werk bij je baan**"
+                        - "**Je baan opzeggen**"
+                        - "Krijg uw baan status"
+                        - "Informatie krijgen over een baan"
+                        - "**Bekijk dit Help menu**"
+                WorkComplete:
+                    Title: "💸 Werk voltooid"
+                    Description: "U hebt **{shift}** gewerkt en **{pay} munten** verdiend! Over **{time}** kunt u weer aan het werk."
+                Promotion:
+                    Title: "🎖️ Promotie"
+                    Description: "Je bent gepromoveerd naar **{tier}**! Je nieuwe uurloon is **{pay}** munten."
+                Applied:
+                    Title: "👷 Nieuwe baan"
+                    Description: "Je bent aangenomen! U werkt nu als **{job}** bij **{workplace}**!"
+                List:
+                    Title: "Vacatures"
+                    Format:
+                        - "**{job-displayName}**"
+                        - "> **Starter uurloon:**\n> {job-pay}\n> **Vereisten:**\n{job-requirements}"
+                Quit:
+                    Confirmation: "Weet je zeker dat je je baan wilt opzeggen?"
+                    Left: "👋 Je hebt met succes je baan opgezegd!"
+                    Cancel: "Geannuleerd"
+                JobInfo:
+                    InvalidJob: "Dat is geen geldige baan. Geldige banen zijn: `{jobs}`"
+                    Field:
+                        Name: "Tier: {tier-name}"
+                        Value: "> **Uurloon:** {tier-pay}\n> **Vereisten:**\n{tier-requirements}"
+                Info:
+                    Requirements:
+                        TimesWorked: "> ● Werk **{amount}** meer ke(e)r(en)"
+                        Level: "> ● Bereik niveau **{level}** (Je hebt **{xp}** meer XP nodig om dat niveau te bereiken!)"
+                        XP: "> ● Heb **{xp}** ervaring (U bent **{amount}** ervaring verwijderd!)"
+                        Coins: "> ● Heb **{coins}** munten (U bent **{amount}** munten verwijderd!)"
+                        Role: "> ● Heb de **{role}** rol"
+                    NoJob: 
+                        Title: "💼 Uw werkstatus"
+                        Fields:
+                            - Name: "Uw baan"
+                              Value: "Werkloos"
+                            - Name: "Uw informatie"
+                              Value: "> **Aantal keer gewerkt:** {amount}"
+                            - "Beschikbare vacatures"
+                        AvailableJobsFormat: "> **{job-name}** | {tier-name} - {tier-pay} per uur"
+                    Embed:
+                        Title: "💼 Uw werkstatus"
+                        Fields:
+                            - "Uw baan"
+                            - "Uw positie"
+                            - Name: "Uw positie"
+                              Value: "> **Uurloon:** {tier-pay}\n> **Gewerkte tijden:** {times-worked}\n> **Aantal keer gewerkt:** {global-times-worked}"
+                            - Name: "On Cooldown"
+                              Value:
+                                - "❌ Je bent op cooldown! Je kunt nog niet naar je werk."
+                                - "✅ Je bent niet meer op cooldown! Je kunt aan het werk."
+                            - Name: "Promotie status"
+                              Value: 
+                                - "✅ **Klaar voor promotie! Ga aan het werk om promotie te maken.**"
+                                - "❌ Promotie is niet mogelijk.\n**Je wordt gepromoveerd zodra je:**\n{requirements}"
+                                - "👑 **Al op het hoogste niveau**"
+                            - Name: "Volgende positie"
+                              Value: "> **Functie Naam:** {tier-name}\n> **Functie Uurloon:** {tier-pay}"
+            Requirements:
+                NoRequirements: "> Geen"
+                TimesWorked: "> ● Eerder gewerkt **{requirement}** tijden"
+                Other: "> ● {requirement-name}: {requirement}"
+        Cointop:
+            UnknownUser: "Onbekend"
+            LeaderboardEmpty: "Het leaderboard is momenteel leeg omdat niemand munten heeft!"
+            Format: "**{pos}.** ``{coins}`` - {user}"
+    Errors:
+        MaxGamble: "Het maximum aantal munten dat je kunt gokken is `{amount}`"
+        NotEnoughCoins: "Je hebt niet het vereiste aantal munten om dit te doen"
+
+XPModule:
+    Commands:
+        Level:
+            Title:
+                Self: "Uw Niveau"
+                User: "{username}'s Niveau"
+            Fields: 
+                - "Huidig niveau"
+                - "Huidige XP"
+            Footer: "{xpneeded} XP nodig om een level omhoog te gaan"
+        Leveltop:
+            UnknownUser: "Onbekend"
+            LeaderboardEmpty: "The leaderboard is currently empty since no one has any level!"
+            Format: "**{pos}.** Niveau: ``{level}`` XP: ``{xp}`` - {user}"
+    CoinReward: "U heeft **{amount}** munten ontvangen!"
+
+AntiAdSystem:
+    StatusAdDetected:
+        Author: "Advertentie gedetecteerd"
+        Description: "Advertentie in de status van {user} gedetecteerd:** {ad}\n**→ tijd:** <t:{time}:f>"
+        Fields: 
+            - "Gebruiker"
+            - "Gebruiker ID"
+            - "Gedetecteerd"
+    MessageAdDetected:
+        Title: "⛔ Advertentie gedetecteerd"
+        Description: "Hey {user}, je bericht is gemarkeerd omdat het een link bevat. Gelieve geen reclame te maken!"
+    Log:
+        Author: "🚫 Advertentie geblokkeerd"
+        Description: "{user} stuurde een bericht met een advertentie in {channel}\n**→ tijd:** <t:{time}:f>\n**→ bericht:** {message}"
+
+TicketModule:
+    Errors:
+        TicketNotExist: "Dit ticket bestaat niet in de database."
+    Commands:
+        Add:
+            Errors:
+                AddSelf: "Je hebt al toegang tot deze ticket."
+                UserAlreadyHaveAccess: "Deze gebruiker is al toegevoegd aan het ticket."
+            Embeds:
+                UserAdded:
+                    Title: "\\➕ Gebruiker toegevoegd"
+                    Description: "De gebruiker {user} is toegevoegd aan dit ticket!"
+        Close:
+            Confirmation: "Weet u zeker dat u dit ticket wilt sluiten?"
+            NoReason: "Geen reden opgegeven"
+            Canceled: ":x: Sluiten geannuleerd"
+            Embeds:
+                DM:
+                    Title: "Uw ticket is gesloten!"
+                    Description: "**Ticket ID:** {ticket}\n**Reden:** {reason}"
+        Closeall:
+            Confirmation: "Weet u zeker dat u alle tickets wilt sluiten?"
+            Canceled: ":x: Sluit alle tickets geannuleerde"
+            Complete: "Alle tickets die zijn gevonden in de database zijn gesloten"
+        New:
+            Errors:
+                MaxTickets: "U kunt slechts **{ticketlimit}** ticket(s) tegelijk open hebben. Sluit een van uw tickets om een nieuwe aan te maken."
+            Embeds:
+                Created:
+                    Title: "Ticket aangemaakt"
+                    Description: "Uw nieuwe ticket is aangemaakt in {channel}!"
+        Remove:
+            Errors:
+                RemoveOwnAccess: "Je kunt je eigen toegang niet verwijderen."
+                NoAccess: "Die gebruiker heeft geen toegang tot dit ticket."
+                CantBeRemoved: "Deze gebruiker kan niet van het ticket verwijderd worden!"
+            Embeds:
+                Removed:
+                    Title: "\\➖ Gebruiker verwijderd"
+                    Description: "De gebruiker {user} is verwijderd van dit ticket!"
+        Rename:
+            Title: "Ticket hernoemd"
+            Description: "Ticket naam veranderd van `{old-name}` naar `{new-name}`"
+        Apply:
+            Errors:
+                InvalidPosition: "Dat is geen geldig standpunt. Probeert u het nog eens."
+                FailedRegExp: "De reguliere expressie is mislukt, probeer het opnieuw."
+                PositionNotFound: "Kon geen positie vinden ``{pos}``"
+                RoleNotFound: "Kon geen rol vinden ``{role}``"
+                MaxApplications: "Je kan maximaal **{application-limit}** sollicitatie open hebben op dit moment. Sluit een van uw sollicitatie(s) om een nieuwe te maken."
+            Embeds:
+                Created:
+                    Title: "Sollicitatie Aangemaakt"
+                    Description: "Uw sollicitatie is aangemaakt in {channel}"
+                Answers:
+                    Title: "Antwoorden"
+                    Fields: 
+                        - "Sollicitant"
+                        - Name: "Antwoorden"
+                          Value: "De sollicitatie was te lang, dus is hij hier geüpload:\n{url}"
+                PositionNoLongerExists:
+                    Title: "Positie"
+                    Description: "De {position} is niet langer beschikbaar! Selecteer een nieuwe functie om op te solliciteren. **Beschikbare posities:** {positions}"
+        Application:
+            Errors:
+                NotApplication: "Dit commando kan alleen worden uitgevoerd in een sollicitatie"
+                NoReason: "U moet aangeven of u een reden wilt of niet om deze actie te voltooien!"
+                AlreadyAccepted: "Deze sollicitatie is al geaccepteerd"
+                AlreadyDenied: "Deze sollicitatie is al afgewezen"
+                AlreadyLocked: "Deze sollicitatie is al vergrendeld!"
+                AlreadyUnlocked: "Deze sollicitatie is niet vergrendeld!"
+                CantNotify: ":x: **Kon gebruiker niet inlichten.**"
+                UserLeft: "De gebruiker die gesolliciteerd heeft voor deze positie is niet langer in de server."
+                NotCompletedApplication: "Dit commando kan alleen worden uitgevoerd in voltooide sollicitaties"
+            Embeds:
+                Menu:
+                    Title: "👷 Sollicitatie Menu"
+                    Fields:
+                        - "Sollicitant"
+                        - "Solliciteren voor"
+                        - "Status"
+                        - "✅ **Accepteer sollicitatie**"
+                        - "❌ **Sollicitatie afwijzen**"
+                        - "🗑️ **Sluit Sollicitatie**"
+                        - "🔒 **Vergrendel Sollicitatie**"
+                        - "🔓 **Ontgrendel Sollicitatie**"
+                SessionOver:
+                    Title: "👷 Sollicitatie Menu"
+                    Description: "Sollicitant: {applicant}\nSolliciteren voor: {position}\nStatus: {status}\n\n~~**Acties:**\n✅ **Accepteer sollicitatie**\n❌ **Sollicitatie afwijzen**\n🗑️ **Sluit Sollicitatie**\n🔒 **Vergrendel Sollicitatie**\n🔓 **Ontgrendel Sollicitatie**~~\n\n**Sollicitatie bewerking sessie geeindigt**"
+                Accepted:
+                    Title: "✅ Sollicitatie geaccepteerd"
+                    Description: "Uw sollicitatie is geaccepteerd.\n\n**Reden:**\n{reason}"
+                Denied:
+                    Title: "❌ Sollicitatie afgewezen"
+                    Description: "Uw sollicitatie is afgewezen.\n\n**Reden:**\n{reason}"
+                Closed:
+                    Title: "⛔ Sollicitatie gesloten"
+                    Description: "Uw sollicitatie is gesloten!\n**Reden:** {reason}"
+                Locked:
+                    Title: "🔒 Sollicitatie vergrendeld"
+                    Description: "Deze sollicitatie is nu vergrendeld. Alleen personeel kan hier berichten sturen."
+                Unlocked:
+                    Title: "🔓 Sollicitatie ontgrendeld"
+                    Description: "Deze sollicitatie is nu ontgrendeld. De sollicitant kan nu berichten sturen in dit kanaal."
+                Reason:
+                    Title: "Reden"
+                    Description: "Gelieve te antwoorden met de reden om deze actie te doen. Als u geen reden wilt, reageer dan met `no` of `none`. Je hebt 5 minuten om te reageren."
+        Tickets:
+            Title: "Open Tickets"
+            Description: 
+                - "{user} heeft de volgende tickets open staan:\n\n{tickets}"
+                - "{user} heeft geen tickets open"
+    Logs:
+        Tickets:
+            NoReason: "Niet beschikbaar"
+            Created:
+                Author: "Ticket aangemaakt"
+                Description: "{creator}: maakt {ticket} ({channel})\n**→ reden:** {reason}\n**→ tijd:** <t:{time}:f>"
+            Closed:
+                Author: "Ticket gesloten"
+                Description: "{executor}: sluit {ticket}\n**→ reden:** {reason}\n**→ maker:** {creator}\n**→ toegevoegde gebruikers:** {added-users}\n**→ tijd:** <t:{time}:f>"
+            Renamed:
+                Author: "Ticket hernoemd"
+                Description: "{executor}: hernoemd {ticket} ({channel})\n**→ oud:** {old}\n**→ nieuw:** {new}\n**→ tijd:** <t:{time}:f>"
+            UserAdded:
+                Author: "Gebruiker toegevoegd aan Ticket"
+                Description: "{executor}: heeft {user} toegevoegd aan {ticket} ({channel})\n**→ tijd:** <t:{time}:f>"
+            UserRemoved:
+                Author: "Gebruiker verwijderd van Ticket"
+                Description: "{executor}: heeft {user} verwijderd van {ticket} ({channel})\n**→ tijd:** <t:{time}:f>"
+        Applications:
+            NoReason: "Niet beschikbaar"
+            Accepted:
+                Author: "✅ Sollicitatie geaccepteerd"
+                Description: "{executor}: heeft {applicant}'s zijn sollicitatie voor de rank {rank} geaccepteerd \n**→ kanaal:** {channel}\n**→ reden:** {reason}\n**→ tijd:** <t:{time}:f>"
+            Denied:
+                Author: "❌ Sollicitatie afgewezen"
+                Description: "{executor}: heeft {applicant}'s zijn sollicitatie voor de rank {rank} afgewezen \n**→ kanaal:** {channel}\n**→ reden:** {reason}\n**→ tijd:** <t:{time}:f>"
+            Created:
+                Title: ""
+                Description: "{applicant}: heeft gesolliciteerd voor de rank {position}\n**→ Antwoorden:** {link}\n**→ kanaal:** {channel}\n**→ tijd:** <t:{time}:f>"
+            Closed: 
+                Author: "⛔ Sollicitatie gesloten"
+                Description: "{executor}: heeft {applicant}'s zijn sollicitatie voor de rank {rank} gesloten \n**→ kanaal:** {channel} / {channel-id}\n**→ reden:** {reason}\n**→ tijd:** <t:{time}:f>"
+            Locked:
+                Author: "🔒 Sollicitatie vergrendeld"
+                Description: "{executor}: heeft {applicant}'s zijn sollicitatie voor de rank {rank} vergrendeld \n**→ kanaal:** {channel}\n**→ tijd:** <t:{time}:f>"
+            Unlocked:
+                Author: "🔓 Sollicitatie ontgrendeld"
+                Description: "{executor}: heeft {applicant}'s zijn sollicitatie voor de rank {rank} ontgerendeld \n**→ kanaal:** {channel}\n**→ tijd:**  <t:{time}:f>"
+    Transcripts:
+        Tickets:
+            Logs:
+                Title: "🎟️ Ticket uitdraai aangemaakt"
+                Description: "Er is een uitdraai gemaakt voor **#{channel-name}**\n\n**Uitdraai:** {transcript}\n\n{sent}\n\n**Ticket maker:** {user-mention} / {user-id} / {user-tag}"
+            DM: 
+                Title: "🎟️ Ticket uitdraai aangemaakt"
+                Description: "Er is een uitdraai gemaakt voor **#{channel-name}**\n\n**Uitdraai:** {transcript}"
+            SentSuccessfully: ":white_check_mark: **Verzonden aan ticket auteur**"
+            FailedToSend: ":x: **Kan niet verzenden naar ticket auteur**"
+        Applications:
+            Logs:
+                Title: "👷‍♂️ Sollicitatie uitdraai aangemaakt"
+                Description: "Er is een uitdraai gemaakt voor **#{channel-name}**\n\n**Uitdraai:** {transcript}\n\n{sent}\n\n**Sollicitant:** {user-mention} / {user-id} / {user-tag}"
+            DM: 
+                Title: "👷‍♂️ Sollicitatie uitdraai aangemaakt"
+                Description: "Er is een uitdraai gemaakt voor **#{channel-name}**\n\n**Uitdraai:** {transcript}"
+            SentSuccessfully: ":white_check_mark: **Verzonden aan sollicitant**"
+            FailedToSend: ":x: **Kan niet naar sollicitant sturen**"
+
+ModerationModule:
+    Errors:
+        CantPunishStaffHigher: "Je kunt een personeelslid met een hogere of dezelfde rang als jij niet straffen."
+        CantPunishStaff: "Je kunt een personeelslid niet straffen."
+        CantPunishUser: "Je kunt deze gebruiker niet straffen."
+        BotCantPunishUser: "Ik kon deze gebruiker niet straffen. Hun hoogste rol is gelijk of hoger dan de mijne!"
+        UserAlreadyPunished: "Deze gebruiker is al gestraft"
+    DefaultAutoWarnReason: "Automatisch Straf"
+    Commands:
+        Bans:
+            NoBans:
+                Title: ":anger: Ban Lijst"
+                Description: "Er zijn momenteel **0** verbanningen in deze server!"
+            List:
+                Title: ":anger: Ban lijst (Pagina {current-page}/{max-pages})"
+                Info: "{user}\n> **ID:** {id}\n> **Reden:** {reason}"
+                ExtraInfo: "\n> **Datum:** {date}\n> **Door:** {executor}\n> **Straf ID:** {id}"
+                IdBan: "{user}\n> **ID:** {id}\n> **Reden:** {reason}\n> ID Ban"
+        IDBan: 
+            Description: "De ID `{id}` is verbannen van deze server. Als de gebruiker met de overeenkomende ID toetreedt, zal hij automatisch verbannen worden."
+        Blacklist:
+            Errors: 
+                CantBeBlacklisted: "Deze gebruiker kan **niet** op de zwarte lijst gezet worden om commando's uit te voeren"
+                InvalidCommand: "Dat is geen geldig commando"
+                AlreadyBlacklistedAll: "Deze gebruiker staat al op de zwarte lijst om alle commando's uit te voeren"
+                AlreadyBlacklistedCommand: "Deze gebruiker staat al op de zwarte lijst om het {command} commando uit te voeren"
+                NotBlacklisted: "Deze gebruiker staat niet op de zwarte lijst om commando's uit te voeren"
+            Embeds:
+                Log:
+                    Author: "🛑 Gebruiker op zwarte lijst"
+                    Description: "{executor}: heeft {user} op de zwarte lijst gezet\n**→ commando(s):** {command}\n**→ tijd:** <t:{time}:f>"
+                List:
+                    Title: "Zwarte lijst commando's"
+                    Description:
+                        - "{user} is momenteel geblokkeerd om alle commando's uit te voeren."
+                        - "{user} wordt momenteel geblokkeerd om de volgende commando's uit te voeren: {commands}"
+                Blacklist:
+                    Title:
+                        - "Je staat op de zwarte lijst om alle commando's uit te voeren"
+                        - "Je staat op de zwarte lijst om dit commando uit te voeren"
+        Clear:
+            Errors:
+                InvalidNumb: "Geef een geldig nummer"
+                BotNoPerms: "Ik heb niet de juiste permissies om berichten te verwijderen."
+                OlderThan14Days: "U kunt geen berichten ouder dan 14 dagen verwijderen."
+                DeleteMoreThan99: "U kunt maximaal 99 berichten per keer wissen"
+            Cleared: "**{amt}** berichten met succes gewist"
+        History:
+            NoHistory: "Deze gebruiker heeft geen straf geschiedenis"
+            Title: "Straf geschiedenis (Pagina {current-page}/{max-pages})"
+            FieldTitle: "**ID:** {id}"
+            Fields:
+                - "> **Type:** "
+                - "> **Gestraft door:** "
+                - "> **Reden:** "
+                - "> **Tijd:** "
+                - "> **Datum:** "
+                - "> **In Effect:** "
+            InEffect: 
+                - "Ja"
+                - "Nee"
+        Lock:
+            AlreadyLocked: "Dit kanaal is al vergrendeld"
+            Locked: ":white_check_mark: Kanaal vergrendeld"
+            Log:
+                Author: "🔒 Kanaal vergrendeld"
+                Description: "{executor}: heeft {channel} vergrendeld \n**→ tijd:** <t:{time}:f>"
+        LockServer:
+            Locking: "Server vergrendelen..."
+            Enabled: ":white_check_mark: Server vergrendeling **INGESCHAKELD**"
+            Log:
+                Author: "🔒 Server vergrendeld"
+                Description: "{member}: heeft de server vergrendeld \n**→ tijd:** <t:{time}:f>"
+        Mutelist:
+            NoMutes:
+                Title: "🔇 Demp lijst"
+                Description: "Er zijn momenteel geen gedempte gebruikers"
+            List:
+                Title: "🔇 Demp lijst (Pagina {current-page}/{max-pages})"
+                MuteInfo: "> **Gebruiker:** {user}\n> **Reden:** {reason}\n> **Datum:** {date}\n> **Gedempt door:** {executor}\n> **Straf ID:** {id}\n> **Type:** Permanent"
+                TempmuteInfo: "> **Gebruiker:** {user}\n> **Reden:** {reason}\n> **Datum:** {date}\n> **Gedempt door:** {executor}\n> **Straf ID:** {id}\n> **Type:** Tijdelijk\n> **Eindigt:** <t:{end-timestamp}:R>"
+                NoExtraInfo: "> **Gebruiker:** {user}\n> **Geen extra informatie**"
+        Removewarn:
+            Errors:
+                NoHistory: "Deze gebruiker heeft geen waarschuwingsgeschiedenis"
+                InvalidID: "Geef een geldig waarschuwings ID"
+            Embeds:
+                Removed:
+                    Title: "De waarschuwing is verwijderd"
+        Report:
+            Errors:
+                ReportBot: "U kunt een bot niet rapporteren"
+                ReportSelf: "U kunt uzelf niet aangeven"
+                InvalidReason: "Geef een reden"
+            Embeds:
+                Report:
+                    Title: "Melding"
+                    Fields: 
+                        - "Gemelde gebruiker"
+                        - "Gerapporteerd door"
+                        - "Reden"
+                Reported:
+                    Title: "💼 Gebruiker gerapporteerd"
+                    Description: "Dank u voor het melden van deze gebruiker. Een medewerker zal deze melding zo spoedig mogelijk in behandeling nemen."
+        Slowmode:
+            Errors:
+                InvalidTime: "De hoeveelheid moet een geheel getal in seconden zijn"
+            Embeds:
+                Enabled:
+                    Title: "Langzame modus ingeschakeld"
+                    Descriptions:
+                        - ":white_check_mark: De langzame kanaalmodus is ingeschakeld"
+                        - ":white_check_mark: De langzame modus is ingeschakeld en de snelheidslimiet is ingesteld op {amount} seconden"
+                Disabled:
+                    Title: "Langzame modus uitgeschakeld"
+                    Description: "De langzame kanaalmodus is uitgeschakeld"
+        Unban:
+            Errors:
+                UserNotBanned: "Deze gebruiker is momenteel niet verbannen! Check discord ban lijst. Of contacteer uw Discord Bot Beheerder"
+        IDUnban:
+            Description: "De ID `{id}` is verwijderd van de ID ban lijst. De gebruiker zal niet langer automatisch gebanned worden als hij zich bij de server aansluit."
+        Unblacklist:
+            Errors:
+                CannotBeBlacklisted: "Deze gebruiker kan niet op de zwarte lijst gezet worden om commando's uit te voeren, dus er zijn geen commando's om deze gebruiker van de zwarte lijst te halen"
+                NotBlacklisted: 
+                    - "Deze gebruiker staat niet op de zwarte lijst om commando's uit te voeren"
+                    - "Deze gebruiker staat niet op de zwarte lijst om dat commando uit te voeren"
+            Embeds:
+                Unblacklisted:
+                    Title: "Gebruiker niet meer op de zwarte lijst"
+                    Description: 
+                        - "{user} kan nu commando's uitvoeren"
+                        - "{user} kan nu het `{command}` commando uitvoeren"
+                Log:
+                    Author: "Gebruiker niet meer op de zwarte lijst"
+                    Description: "{executor}: Heeft {user}'s van de zwartelijst gehaalt\n**→ commando:** {command}\n**→ tijd:** <t:{time}:f>"
+        Unlock:
+            NotLocked: "Dit kanaal is niet vergrendeld"
+            Unlocked: ":x: Vergrendelmodus **UITGESCHAKELD**"
+            Log:
+                Author: "🔓 Kanaal ontgrendeld"
+                Description: "{executor}: Heeft {channel} ontgrendeld\n**→ tijd:** <t:{time}:f>"
+        UnlockServer:
+            Unlocking: "Server ontgrendelen..."
+            Disabled: ":x: Server is ontgrendeld"
+            Log:
+                Author: "🔓 Server ontgrendeld"
+                Description: "{member}: heeft de server ontgrendeld\n**→ tijd:** <t:{time}:f>"
+        Unmute:
+            Errors:
+                UserNotMuted: "Deze gebruiker is momenteel niet gedempt!"
+        Warnings:
+            Errors:
+                NoHistory: "{user} heeft geen waarschuwing geschiedenis!"
+                NoWarnings: "Er zijn geen waarschuwingen"
+            Embed:
+                Author: "Alle waarschuwingen"
+                Title: "Waarschuwingen (Pagina {current-page}/{max-pages})"
+                Format:
+                    - "ID: {id}"
+                    - "> **Gewaarschuwd door:** {user}\n> **Reden:** {reason}\n> **Datum:** {date}"
+                    - "ID: {id}"
+                    - "> **Gewaarschuwde gebruiker:** {user}\n> **Gewaarschuwd door:** {executor}\n> **Reden:** {reason}\n> **Datum:** {date}"
+    Logs:
+        UserWarned:
+            Author: "⚠️ Gebruiker gewaarschuwd"
+            Description: "{executor}: heeft {user} een waarschuwing gegeven\n**→ Reden:** {reason}\n**→ id:** {id}\n**→ Aantal waarschuwingen:** {count}\n**→ Tijd:** <t:{time}:f>"
+        UserPunished:
+            Author: "⛔ Gebruiker gestraft"
+            Description: "{executor}: {punishment-type} {user}\n**→ Reden:** {reason}\n**→ id:** {id}\n**→ Tijd:** <t:{time}:f>"
+        UserTempPunished:
+            Author: "⏲️ Gebruiker Tijdelijk gestraft"
+            Description: "{executor}: heeft tijdelijk {punishment-type} {user}\n**→ Reden:** {reason}\n**→ id:** {id}\n**→ Hoelang:** {length}\n**→ tijd:** <t:{time}:f>"
+        UserUnwarned:
+            Author: "➖ Waarschuwing verwijderd"
+            Description: "{executor}: heeft waarschuwing verwijderd van {user}\n**→ waarschuwing verwijderd:**\n{warning}\n**→ Tijd:** <t:{time}:f>"
+            Warning: "> **Waarschuwing ID:** {id} \n> **Gewaarschuwd door:** {user} \n> **Gewaarschuwd op:** {date} \n> **Waarschuwing Reden:** {reason}"
+        UserUnpunished:
+            Author: "↩️ Gebruiker Ongestraft"
+            Description: "{executor}: Heeft {user}'s {punishment-type} ongedaan gemaakt\n**→ tijd:** <t:{time}:f>"
+
+AdminModule:
+    Commands:
+        Accept:
+            NoID: "Geef een sollicitatie, suggestie, of bug report bericht ID"
+            Suggestion: "✅ Suggestie geaccepteerd"
+            BugReport: "✅ Bugrapport geaccepteerd"
+        Announce:
+            Questions:
+                - "Wat is de titel van de aankondiging?"
+                - "Wat is de beschrijving van de aankondiging?"
+                - "Waar wilt u de aankondiging heen sturen? \n\nAntwoord met 'here' om het in dit kanaal te posten, 'default' om te posten in het standaard aankondigingen kanaal, of reageer met '#kanaal-naam' om het in een ander kanaal te posten."
+                - "Wie zou je willen pingen? Reageer met 'no one', 'everyone', @role of de naam van een rol. Als u meerdere rollen wilt pingen, scheidt u elke rol met een komma."
+                - "Wilt u een thumbnail afbeelding? Zo ja, reageer dan met de link naar de afbeelding. Zo niet, gelieve te zeggen 'no'"
+                - "Wilt u een afbeelding? Zo ja, reageer dan met de link naar de afbeelding. Zo niet, gelieve te zeggen 'no'"
+            AnnouncementSetup: "Aankondiging Setup: {pos}"
+            SetupCanceled: ":x: Aankondiging geannuleerd"
+            Embeds:
+                Posted:
+                    Title: "Aankondiging geplaatst"
+                    Description: ":white_check_mark: De aankondiging is succesvol verzonden."
+                InvalidChannel:
+                    Title: "Ongeldig kanaal"
+                    Description: "Gelieve een kanaal te vermelden"
+        AutoAnnounce:
+            Errors:
+                Disabled: "Automatische aankondigingen zijn momenteel uitgeschakeld in de configuratie"
+                NoAnnnouncements: "Er zijn geen automatische aankondigingen. Voeg een automatische aankondiging toe aan de configuratie"
+            Embeds:
+                List:
+                    Title: "🗓️ Auto Aankondigingen (Pagina {current-page}/{max-pages})"
+                    Field:
+                        Name: "ID: {id}"
+                        Value: "> **Kanaal:** {channel}\n> **Volgende uitzendpoging:** {date} (in {timer})"
+                Restart:
+                    Title: "🔄 Auto aankondiging herstart"
+                    Description: "De automatische aankondiging voor {channel} is opnieuw gestart."
+                All:
+                    Title: "🔄 Auto aankondiging herstart"
+                    Description: "Alle automatische aankondigingen zijn opnieuw gestart."
+        Addinvites:
+            Title: "Uitnodigingen toegevoegd"
+            Description: "**{amount}** bonusuitnodigingen toegevoegd aan {user}"
+        Bnote:
+            NotBugReportChannel: "Dit commando kan alleen worden uitgevoerd in een kanaal voor bugrapporten"
+            Success:
+                Title: "Bericht verzonden!"
+                Description: "Het bericht is verzonden"
+        Createrole:
+            Errors:
+                InvalidHex: "Het antwoord moet in hexadecimale vorm zijn"
+                InvalidNumber: "Het antwoord moet een berekend toestemmingsnummer zijn"
+            Embeds:
+                RoleSetup:
+                    Title: "Creëer een rol (Vraag {pos})"
+                    Questions:
+                        - "Hoe wil je dat de rol genoemd wordt?"
+                        - "Wat wil je dat de kleur van de rol is? \n\n**Reageer met een hexadecimale kleur**"
+                        - "Wat wil je dat de rechten van de rol zijn? \n\n**Antwoord met het berekende machtigingsnummer of 0 voor geen machtigingen.** Gebruik een site als deze om te helpen: https://discordapi.com/permissions.html"
+                RoleCreated:
+                    Title: "Rol gecreëerd"
+                    Description: 
+                        - "De {role} (ID: {id}) rol is aangemaakt met de volgende permissies: {permissions}"
+                        - "De {role} (ID: {id}) rol is gecreëerd"
+        Deleterole:
+            Errors:
+            InvalidRole: "Geef een geldige rol op"
+            Confirmation: "Weet u zeker dat u deze rol wilt verwijderen?"
+            Deleted: ":white_check_mark: Rol verwijderd"
+            Canceled: ":x: Rol Verwijdering Geannuleerd"
+        Deny:
+            NoID: "Geef een sollicitatie of een suggestie bericht ID"
+            InvalidID: "Dat is geen geldige suggestie, bug rapport, of sollicitatie ID"
+            Suggestion: "❌ Suggestie afgewezen"
+            BugReport: "❌ Bugrapport afgewezen"
+            Application: "❌ Sollicitatie afgewezen"
+        Edit:
+            Errors:
+                NotBotMessage: "U kunt alleen berichten bewerken door de bot"
+                ErrorOccured: "Er is een fout opgetreden bij het ophalen van het bericht"
+            Edited: ":white_check_mark: Bericht aangepast!"
+        Fix:
+            NoID: "Geef een bug report bericht ID"
+            InvalidID: "Dat is geen geldig bug rapport ID"
+            Fixed: "🛠️ Bug Report opgelost"
+        Givecoins:
+            GiveToBot: "Je kunt geen munten aan een bot geven"
+            CoinsAdded:
+                Title: "💰 Munten Toegevoegd"
+                Description: "**{amount}** Er zijn munten toegevoegd aan het saldo van {user}."
+                Everyone: "iedereen"
+        Givelevels:
+            GiveToBot: "Je kunt geen levels aan een bot geven"
+            LevelsAdded:
+                Title: "📈 Niveaus toegevoegd"
+                Description: "**{amount}** niveaus zijn toegevoegd aan {user}."
+                Everyone: "iedereen"
+        Giverole:
+            GiveToBot: "Je kunt geen rollen aan een bot geven"
+            Adding: "Rollen toevoegen... Dit kan een tijdje duren. Hier neem een wachtmuziekje (https://www.youtube.com/watch?v=xy_NKN75Jhw)"
+            HigherRole:
+                - "Je hebt geen toestemming om rollen te geven boven je hoogste rol!"
+                - "Ik kan alleen rollen geven onder mijn hoogste rol!"
+            RoleAdded:
+                Title: "Rol toegevoegd"
+                Description: "{role} is toegevoegd aan {user}."
+                Everyone: "iedereen"
+        Givexp:
+            GiveToBot: "Je kunt geen ervaring geven aan een bot"
+            XPAdded:
+                Title: "✨ XP Toegevoegd"
+                Description: "**{amount}** xp is toegevoegd aan {user}."
+                Everyone: "iedereen"
+        Movevc:
+            NoMembers: "Er zijn geen leden in dat spraak kanaal"
+            Invalid:
+                Title: "Ongeldig spraakkanaal"
+                Description: "Indien het spraakkanaal spaties bevat, gebruik dan een underscore in plaats van de spatie\n**Gebruik:** `{usage}`"
+            Moved:
+                Title: "🔊 Verplaatste Gebruikers"
+                Description: "Alle gebruikers in `{channel-1}` spraakkanaal zijn verplaatst naar `{channel-2}`"
+        Msg:
+            CouldntSend: "Er is een fout opgetreden toen ik probeerde de gebruiker(s) een bericht te sturen. Ze hebben waarschijnlijk hun DM's vergrendeld."
+            Sent: ":white_check_mark: berichten verstuurd"
+        Nuke:
+            Confirmation: 
+                Title: "Weet je zeker dat je deze knop wil indrukken?"
+                Description: "Weet je zeker dat je {channel} wilt nuken? Dit zal het kanaal verwijderen en opnieuw aanmaken. Berichten zullen niet worden hersteld."
+            Nuked:
+                Title: "Kanaal platgebombardeerd"
+                Description: "Het **{channel}** kanaal is opgeheven. Nieuw kanaal: {new-channel}"
+        Paste:
+            Title: ":link: Paste Created"
+            Description: "The paste can be viewed here: {link}"
+        React:
+            InvalidMessage: "Dat bericht bestaat niet in dit kanaal"
+            InvalidEmoji: "Die emoji bestaat niet of de bot heeft er geen toegang toe"
+            Reacted: "Reageer op het bericht met de {emoji} emoji!"
+        Reactfor:
+            Created: "Reageer voor {type} embed gemaakt"
+            Application:
+                WhichPosition: "Voor welke positie wilt u dit embed?"
+        Removeinvites:
+            Title: "Uitnodigingen verwijderd"
+            Description: "Verwijderde **{amount}** bonus uitnodigingen van {user}"
+        Rolemenu:
+            Embeds:
+                InvalidMenu:
+                    Title: "Ongeldig menu"
+                    Description: "Dat rolmenu bestaat niet. Dit zijn de volgende geconfigureerde rolmenu's:\n{menus}"
+                List:
+                    Title: "Rolmenu's"
+                    Description: "Dit zijn de volgende geconfigureerde rolmenu's:\n{menus}"
+                SelectMenuPlaceholder: "Klik om de gewenste rollen te selecteren!"
+                Sent: ":white_check_mark: Menu verzonden!"
+            RoleRemoved: "Je hebt de ``{role}`` rol niet meer!"
+            RoleAdded: "Je hebt nu de ``{role}`` rol!"
+        Saccept:
+            NoID: "Geef een suggestie of bericht ID"
+            Accepted: "✅ Suggestie geaccepteerd"
+            InvalidID: "Dat is geen geldige suggestie ID"
+        Say:
+            Sent: "Bericht verzonden!"
+        Sdeny:
+            NoID: "Geef een suggestie of bericht ID"
+            Denied: "❌ Suggestie afgewezen"
+            InvalidID: "Dat is geen geldige suggestie ID"
+        Simplement:
+            NoID: "Geef een suggestie of bericht ID"
+            Implemented: "🛠️ Suggestie uitgevoerd"
+            InvalidID: "Dat is geen geldige suggestie ID"
+        Snote:
+            NotSuggestionChannel: "Dit commando kan alleen worden uitgevoerd in een suggestiekanaal"
+            Sent: ":white_check_mark: Opmerking Verzonden"
+        Sudo: ":white_check_mark: Opmerking Verzonden"
+        Takecoins:
+            TakeFromBot: "Je kunt geen munten van een bot nemen"
+            TakeNegative: "Je kunt geen negatieve hoeveelheid munten nemen"
+            CoinsRemoved:
+                Title: "💰 Munten verwijderd"
+                Description: "**{amount}** munten zijn verwijderd van {user}'s saldo."
+                Everyone: "iedereen"
+        Takelevels:
+            TakeFromBot: "Je kunt geen levels van een bot afnemen"
+            TakeNegative: "Je kunt geen negatieve hoeveelheid levels nemen"
+            LevelsRemoved:
+                Title: "📉 Levels verwijderd"
+                Description: "**{amount}** levels zijn verwijderd van {user}."
+                Everyone: "iedereen"
+        Takerole:
+            TakeFromBot: "Je kunt geen rol afnemen van een bot"
+            Removing: "Rollen afnemen... Dit kan een tijdje duren. Hier neem een wachtmuziekje (https://www.youtube.com/watch?v=xy_NKN75Jhw)"
+            HigherRole:
+                - "Je hebt geen toestemming om rollen te nemen boven je hoogste rol!"
+                - "Ik kan alleen rollen aannemen beneden mijn hoogste rol!"
+            RoleRemoved:
+                Title: "Rol verwijderd"
+                Description: "{role} is verwijderd van {user}."
+                Everyone: "iedereen"
+        Takexp:
+            TakeFromBot: "Je kunt geen ervaring van een bot afnemen"
+            TakeNegative: "Je kunt geen negatieve hoeveelheid XP nemen"
+            XPRemoved:
+                Title: "✨ XP verwijderd"
+                Description: "**{amount}** ervaring is verwijderd van {user}."
+                Everyone: "iedereen"
+        Topic:
+            Title: "Onderwerp Bijgewerkt"
+            Description: "Het onderwerp van het kanaal is bijgewerkt naar ```{newtopic}```"
+        Update:
+            Questions:
+                - "Wat is de beschrijving van de update?"
+                - "Wat is de versie van de update? Als u geen versienummer wilt, zeg dan 'none'"
+                - "Waar wilt u de update naartoe sturen? \n\nAntwoord met 'here' om het in dit kanaal te posten, 'default' om te posten in het standaard aankondigingen kanaal, of reageer met '#kanaal-naam' om het in een ander kanaal te posten."
+                - "Wie zou je willen pingen? Reageer met 'no one', 'everyone', @role of de naam van een rol. Als u meerdere rollen wilt pingen, scheidt u elke rol met een komma."
+                - "Wilt u een thumbnail afbeelding? Zo ja, reageer dan met de link naar de afbeelding. Zo niet, gelieve te zeggen 'no'"
+                - "Wilt u een afbeelding? Zo ja, reageer dan met de link naar de afbeelding. Zo niet, gelieve te zeggen 'no'"
+            UpdateSetup: "Update Setup: {pos}"
+            SetupCanceled: ":x: Update geannuleerd"
+            Embeds:
+                Posted:
+                    Title: "Update geplaatst"
+                    Description: "✅ De update is succesvol geplaatst"
+                InvalidChannel:
+                    Title: "Ongeldig kanaal"
+                    Description: "Gelieve een kanaal te vermelden"
+                Update:
+                    Title: "Update"
+                    Footer: "Geplaatst door: {tag}"
+        Vote:
+            Errors:
+                MaxChoices: "Je kunt maar maximaal 10 keuzes hebben"
+                CouldNotReact: "Kon niet reageren met {emoji} emoji"
+            Embeds:
+                Poll:
+                    Title: "Poll - {pollquestion}"
+                    Footer: "Geplaatst door: {tag}"
+                Posted:
+                    Title: "Poll geplaatst"
+                    Description: "✅ De poll is succesvol geplaatst"
+                PollSetup:
+                    Title: "Poll Setup - {pos}"
+                    Questions:
+                        - "Waar stemmen de mensen op?"
+                        - "Wat is de beschrijving van de stemming? (Vergeet niet uit te leggen welke emoji staan voor wat ze stemmen)"
+                        - "Wil je aangepaste emoji's? Zo ja, antwoord met de emoji's elk gescheiden met een komma\nEx: :cactus:,:crown:,:ice_cube: of 'no' zeggen"
+                        - "Hoeveel opties hebben mensen? Maximaal 10."
+                        - "Wilt u een thumbnail afbeelding? Zo ja, reageer dan met de link naar de afbeelding. Zo niet, gelieve 'no' te zeggen"
+                        - "Waar wilt u de peiling naar toe sturen? \n\nAntwoord met 'here' om het in dit kanaal te posten, 'default' om te posten in het standaard poll kanaal, of reageer met '#kanaal-naam' om het in een ander kanaal te posten."
+            SetupCanceled: ":x: Poll geannuleerd"
+
+ManagementModule:
+    Commands:
+        Addons:
+            List:
+                Title: "Addons"
+                Description: "De volgende addons zijn momenteel geïnstalleerd"
+                Fields:
+                    - "Geladen"
+                    - "Ongeladen"
+            Unload:
+                Title: "Addon Uitgeschakeld"
+                Description: "De `{name}` addon is uitgeschakeld"
+            Load:
+                Title: "Addon Ingeschakeld"
+                Description: "De `{name}` addon is ingeschakeld"
+            Reload:
+                Title: "Addon herladen"
+                Description: "De `{name}` addon is opnieuw geladen"
+            Info:
+                Title: "\\➕ {name} Addon"
+                Fields:
+                    - Name: "Status"
+                      Value: 
+                        - "**:white_check_mark: geladen**"
+                        - "**:x: niet geladen**"
+                    - "Events"
+                    - "Commands"
+                    - Name: "Errors"
+                      Value: "> **Total:** {errors-length}\n> **Unique:** {unique-length}"
+            Errors:
+                NotExist: "Die addon bestaat niet"
+                AlreadyLoaded: "Die addon is al geladen"
+                AlreadyUnloaded: "Die addon is al niet meer geladen"
+        Command:
+            Errors:
+                InvalidCommand: "Dat is geen geldige opdracht."
+                InvalidStatus: "U moet ofwel enable ofwel disable opgeven."
+                StatusCantBeModified: "De status van dit commando kan niet worden gewijzigd."
+                InvalidPageNumber: "Dat is geen geldig paginanummer"
+                AlreadyEnabled: "Dat commando is al ingeschakeld"
+                AlreadyDisabled: "Dat commando is al uitgeschakeld"
+            Embeds:
+                List:
+                    Title: "Commandos (Pagina {current-page}/{max-pages})"
+                    Description: "Dit zijn de huidige commando's :\n{commands}"
+                    Footer: "Uitvoeren {prefix}command <command> <enable|disable> om een commando in of uit te schakelen"
+                Command:
+                    Title: "{command} Command"
+                    Fields: 
+                        - "Current Status"
+                        - "Module"
+                    Status: 
+                        - "Enabled"
+                        - "Disabled"
+                EnabledDisabled:
+                    Title: "Command {status}"
+                    Description: "The ``{command}`` command has been **{status}**"
+        CommandChannels:
+            Errors:
+                InvalidCommand: "Dat is geen geldig commando"
+                AlreadyEditing: "Je bent al bezig met het bewerken van de kanaalinstellingen van deze opdracht. Maak eerst je huidige actie af!"
+                InvalidChannel: "Dat is geen geldig kanaal. Probeer het opnieuw"
+                AlreadyInList: "Dat kanaal staat al in de lijst."
+                NotInList: "Dat is geen kanaal in de lijst."
+            Manager:
+                Title: 🛠️ Commando kanaal Beheer
+                Description:
+                    - "Dit commando gebruikt momenteel de globale commando-instellingen. Zodra u wijzigingen aanbrengt, zullen de instellingen onafhankelijk zijn."
+                    - "U bent de globale commando instellingen aan het bewerken. Commando's die niet hun eigen specifieke instellingen hebben, volgen deze kanaalregels."
+                Fields:
+                    - "🖥️ Command⠀⠀⠀⠀⠀⠀"
+                    - "🚫 Restriction Type⠀⠀⠀⠀⠀⠀"
+                    - "📜 Whitelisted Channels"
+                    - "📜 Blacklisted Channels"
+                Buttons:
+                    - "Type beperking wijzigen"
+                    - "Kanaal toevoegen"
+                    - "Kanaal verwijderen"
+                    - "Globale instellingen gebruiken"
+                    - "Klaar met bewerken"
+            RestrictionType:
+                Question: "Aangezien u het restrictietype wijzigt en al kanalen hebt toegevoegd, wilt u de kanalen opnieuw instellen?"
+                Updated: "✅ Beperkingstype geüpdatet!"
+            AddChannel:
+                Question: "Welk kanaal zou je willen toevoegen? Antwoord met de naam, ID, of vermelding. Om te annuleren, antwoord met \"cancel\""
+                Added: "✅ Kanaal toegevoegd!"
+            RemoveChannel:
+                Question: "Welk kanaal wil je verwijderen? Antwoord met de naam, ID, of vermelding. Om te annuleren, antwoord met \"cancel\""
+                Removed: "✅ Kanaal verwijderd!"
+            UseGlobal:
+                Switched: "✅ Globale commando instellingen nu in gebruik!"
+            Global: "globale"
+        Embed:
+            NotFound: "Een embed met de naam `{name}` kon niet worden gevonden in de embeds.yml"
+        Module:
+            Errors:
+                InvalidModule: "Dat is geen geldige module."
+                InvalidStatus: "U moet ofwel enable of disable opgeven."
+                StatusCantBeModified: "De status van deze module kan niet worden gewijzigd."
+                AlreadyEnabled: "Die module is al ingeschakeld"
+                AlreadyDisabled: "Die module is al uitgeschakeld"
+            Embeds:
+                List:
+                    Title: "Modules"
+                    Description: "Dit zijn de huidige modules in CoreBot:\n{modules}"
+                    Footer: "Voer {prefix}module <module> <enable|disable> uit om een module in of uit te schakelen"
+                Module:
+                    Title: "{module} Module"
+                    Fields: 
+                        - "Huidige status"
+                        - "Commands"
+                    Status: 
+                        - "Ingeschakeld"
+                        - "Uitgeschakeld"
+                EnabledDisabled:
+                    Title: "Module {status}"
+                    Description: "De ``{module}`` module is **{status}**"
+        Reload:
+            Errors:
+                UnknownAction: "De ``{action}`` actie werd niet gevonden."
+            Addons:
+                - "Herladen van bot addons..."
+                - "Bot addons zijn opnieuw geladen!"
+            Commands:
+                - "Herladen van botcommando's..."
+                - "Bot commando's zijn opnieuw geladen!"
+            Events:
+                - "Herladen van bot events..."
+                - "Bot events zijn opnieuw geladen!"
+            Bot:
+                - "Herladen bot..."
+                - "Bot is succesvol herladen!"
+        Setprefix:
+            Title: "Voorvoegsel bijgewerkt"
+            Description: "Het voorvoegsel is nu ingesteld op ``{prefix}``"
+        Setstatus:
+            AlreadySet: "De bot is al ingesteld op die status"
+            Embeds:
+                Setup:
+                    Title: "Status Setup"
+                    Description: "Kies het soort status \n\n🟢 | **Online**\n🔴 | **Niet storen**\n🟠 | **Inactief**\n⚫ | **Onzichtbaar**"
+                Updated:
+                    Title: "Bot Status Bijgewerkt"
+                    Description: "De status van de bot is nu: **{status}**"
+                    DND: "Niet storen"
+        Setactivity:
+            Embeds:
+                Setup:
+                    Title: "Activiteit Setup - {pos}"
+                    Descriptions:
+                        - "Kies het type activiteit \n\n🎮 | **Spelen**\n📺 | **Kijken naar**\n📹 | **Streaming**\n👂 | **Luisteren**\n❌ | **Status verwijderen**"
+                        - "Wat wil je dat de activiteit zegt?\n\nVariabelen die u kunt gebruiken zijn:\n**{users}** - Totaal aantal leden in de Discord\n**{tickets}** - Totaal aantal tickets open in de discord"
+                Updated:
+                    Title: "Bot activiteit bijgewerkt"
+                    Descriptions:
+                        - "De activiteit van de bot is verwijderd"
+                        - "De activiteit van de bot is nu: {activity}"
+        Setcoins:
+            SetBot: "Je kunt de munten van een bot niet instellen"
+            SetNegative: "U kunt de munten niet op een negatief bedrag zetten"
+            CoinsSet:
+                Title: "💰 Munten Set"
+                Description: "{user}'s muntstukken zijn ingesteld op **{amount}**."
+                Everyone: "Iedereen"
+        Setexp:
+            SetBot: "Je kunt de exp van een bot niet instellen"
+            SetNegative: "U kunt de XP niet op een negatief bedrag zetten"
+            XPSet:
+                Title: "✨ XP Set"
+                Description: "{user}'s ervaring is ingesteld op **{xp}**. Hun niveaus zijn ook bijgewerkt tot **{level}**"
+                Everyone: "Iedereen"
+        Setlevel:
+            SetBot: "U kunt het niveau van een bot niet instellen"
+            SetNegative: "U kunt de niveaus niet op een negatief bedrag zetten"
+            LevelSet:
+                Title: "📊 Level Set"
+                Description: "{user}'s niveau is ingesteld op **{level}**. Hun ervaring is ook bijgewerkt tot **{xp}**"
+                Everyone: "Iedereen"
+        Reset:
+            Confirmation: "Weet u zeker dat u deze gegevens wilt resetten? Dit zal de tabel(len) volledig verwijderen uit de database en ze opnieuw aanmaken."
+            Resetting: "Resetten van gegevens..."
+            Embed:
+                Title: "Gegevens Reset"
+                Description: "De volgende tabellen zijn opnieuw ingesteld: {tables}"
+        Updaterolemenus:
+            NoMenus: "Er zijn geen rolmenu's"
+        Verification:
+            InvalidChannel: "Ongeldig verificatie kanaal in config ({channel} kanaal niet gevonden)"
+            InvalidMessage: "Ongeldige verificatiebericht-ID in config (bericht niet gevonden)"
+            InvalidType: "Ongeldig verificatietype in config (geldige types: reactie, code, knop)"
+            MessageSent: "Verificatiebericht verzonden :white_check_mark:"
+            Disabled: "Het verificatiesysteem is uitgeschakeld"
+
+FunModule:
+    Commands:
+        8Ball:
+            Title: "🔮 8 Ball"
+            Fields: 
+                - "Your Question"
+                - "The Magic 8 Ball Says.."
+            Answers:
+                - Het is zeker.
+                - Het is beslist zo.
+                - Zonder twijfel.
+                - Ja - beslist.
+                - Je kunt erop vertrouwen.
+                - Zoals ik het zie, ja.
+                - Zeer waarschijnlijk.
+                - Vooruitzicht goed.
+                - Ja.
+                - De tekenen wijzen op ja.
+                - Antwoord wazig, probeer het opnieuw.
+                - Vraag het later nog eens.
+                - Beter je nu niet vertellen.
+                - Kan nu niet voorspellen.
+                - Concentreer je en vraag het nog eens.
+                - Reken er niet op.
+                - Mijn antwoord is nee.
+                - Mijn bronnen zeggen nee.
+                - Vooruitzichten niet zo goed.
+                - Zeer twijfelachtig.
+        Coinflip:
+            HeadIcon: "https://cdn.discordapp.com/attachments/637105382631669760/675097745295540244/heads.png"
+            TailIcon: "https://cdn.discordapp.com/attachments/637105382631669760/675097748747452431/tails.png"
+            Errors:
+                Atleast1: "Je moet minstens 1 munt inzetten"
+            Embeds:
+                Normal:
+                    Title: "🔄 Munt opgegooid"
+                    Description: "De munt werd opgegooid en viel op **{result}s**"
+                    Footer: "Geflipt door: {user}"
+                Gamble:
+                    Title: "🔄 Munt opgegooid"
+                    Won: "Het muntje landde op **{result}** en u verdiende {earned-lost} munten \n**Nieuw saldo:** {coins}"
+                    Lost: "De munt is gevallen op **{result}** en u heeft verloren. {earned-lost} munten\n**Nieuw saldo:** {coins}"
+                    Footer: "Geflipt door: {user}"
+        Connect4:
+            Errors:
+                PlayWithBotOrSelf: "Je kunt 4 opeenrij niet spelen met jezelf of met een bot!"
+                ColumnFull: "Die kolom is vol! Gelieve een andere kolom te kiezen."
+                Atleast1: "U moet ten minste 1 munt inzetten"
+                NotEnoughCoins: 
+                    - "Je hebt niet genoeg munten om zoveel in te zetten"
+                    - "Die gebruiker heeft niet genoeg munten"
+            Embeds:
+                InviteSent: ":white_check_mark: Uitnodiging verstuurd"
+                Invite:
+                    Title: "Uitnodiging voor 4 opeenrij"
+                    Description: "{user} heeft u uitgenodigd om 4 opeenrij te spelen! **Ga je akkoord om mee te doen? Je hebt 60 seconden om de uitnodiging te accepteren.\n\n{bet}"
+                    Bet: "**Er zijn __{amount}__ munten op de lijn !**"
+                InviteCanceled:
+                    Title: "4 opeenrij spel geannuleerd"
+                    Descriptions:
+                        - "{user} ging niet akkoord om 4 opeenrij te spelen!"
+                        - "{user} heeft uw 4 opeenrij uitnodiging niet op tijd geaccepteerd!"
+                GameBoard:
+                    Title: "4 opeenrij"
+                    Description: "{board}\n\nHet is momenteel {turn}'s beurt!"
+                    Fields: 
+                        - "\\🔴 Speler 1⠀⠀⠀⠀"
+                        - "VS"
+                        - "\\🟡 Speler 2"
+                GameBoardOver:
+                    Title: "4 opeenrij (Game Over)"
+                    Description: "{board}\n\n**🌟 WINNER:** {winner}"
+                    GameOverWin: "🎉 Gefeliciteerd {winner}, je hebt het spel connect 4 gewonnen!\n{bet}"
+                    GameOverTie: "GG! Het was een gelijkspel {player-1} en {player-2}!"
+                    Bet: "{loser} heeft {winner} **{amount}** munten gegeven"
+                    Tie: "**TIE**"
+            WaitForReactions: "*Wacht tot alle 7 reacties zijn toegevoegd...*"
+        Gamestats:
+            Title: "🎮 Spel statistieken"
+            Fields: 
+                - Name: "4 opeenrij statistieken"
+                  Value: "> **Gewonnen:** {wins}\n> **Verloren:** {losses}\n> **Gelijkspel:** {ties}\n> **Gespeelde spelletjes:** {total}"
+                - Name: "Boter Kaas en Eieren statistieken"
+                  Value: "> **Gewonnen:** {wins}\n> **Verloren:** {losses}\n> **Gelijkspel:** {ties}\n> **Gespeelde spelletjes:** {total}"
+        Gametop:
+            Unknown: "Onbekend"
+            Errors:
+                NoOnePlayed:
+                    - "Niemand heeft 4 opeenrij gespeeld"
+                    - "Niemand heeft boter kaas en eieren gespeeld"
+                    - "Niemand heeft nog spelletjes gespeeld"
+            Embeds:
+                Connect4:
+                    Title: "🎲 4 opeenrij Leaderboard (Pagina {current-page}/{max-pages})"
+                    Format: "**{pos}.** `{amount}` Wins - {user}"
+                TicTacToe:
+                    Title: "🎲 boter kaas en eieren Leaderboard (Pagina {current-page}/{max-pages})"
+                    Format: "**{pos}.** `{amount}` Wins - {user}"
+                All:
+                    Title: "🎲 Spel Leaderboard (Page {current-page}/{max-pages})"
+                    Format: "**{pos}.** `{amount}` Wins - {user}"
+        Math:
+            Error: "An error occured while evaluating the equation."
+            Embed:
+                Title: "\\➗ Wiskunde"
+                Fields:
+                    - Your expression
+                    - Expression answer
+        RockPaperScissors:
+            Title: "Steen-papier-schaar"
+            Description: "**Je koos:** {you}\n**Bot koos:** {bot}\n\n**Resultaat:** {user} wint!"
+        Rolldice:
+            Sides:
+                - "https://cdn.discordapp.com/attachments/637105382631669760/675091831746199552/dice-1.png"
+                - "https://cdn.discordapp.com/attachments/637105382631669760/675091832966873088/dice-2.png"
+                - "https://cdn.discordapp.com/attachments/637105382631669760/675091834485342238/dice-3.png"
+                - "https://cdn.discordapp.com/attachments/637105382631669760/675091835575861248/dice-4.png"
+                - "https://cdn.discordapp.com/attachments/637105382631669760/675091837228285982/dice-5.png"
+                - "https://cdn.discordapp.com/attachments/637105382631669760/675091838419337256/dice-6.png"
+            RollingDice: "*Dobbelstenen gooien...*"
+            Embed:
+                Title: "🎲 Dobbelstenen gegooid"
+                Description: "De dobbelsteen werd gegooid en kwam terecht op **{result}**"
+                Footer: "Gerold door: {user}"
+        TicTacToe:
+            Errors:
+                PlayWithBotOrSelf: "Je kunt geen boter kaas en eieren spelen met jezelf of een bot!"
+                ColumnFull: "Die kolom is vol! Gelieve een andere kolom te kiezen."
+                Atleast1: "U moet ten minste 1 munt inzetten"
+                NotEnoughCoins: 
+                    - "Je hebt niet genoeg munten om zoveel in te zetten"
+                    - "Die gebruiker heeft niet genoeg munten"
+            Embeds:
+                Invite:
+                    Title: "Boter-Kaas-Eieren Uitnodiging"
+                    Description: "{user} heeft je uitgenodigd om Boter-Kaas-Eieren te spelen! **Ga je akkoord om mee te doen? ** Je hebt 60 seconden om de uitnodiging te accepteren.\n\n{bet}"
+                    Bet: "**Er zijn __{amount}__ munten op de lijn!**"
+                InviteCanceled:
+                    Title: "Boter-Kaas-Eieren Spel Geannuleerd"
+                    Descriptions:
+                        - "{user} ging niet akkoord om Boter-Kaas-Eieren te spelen!"
+                        - "{user} heeft je Boter-Kaas-Eieren uitnodiging niet op tijd geaccepteerd!"
+                GameBoard:
+                    Title: "Boter-Kaas-Eieren"
+                    Description: "❌ {player-1} **tegen** ⭕ {player-2}\n\n{board}\n\n**beurt:**\n{turn}"
+                GameBoardOver:
+                    Title: "Boter-Kaas-Eieren | GAME OVER"
+                    Description: "❌ {player-1} **tegen** ⭕ {player-2}\n\n{board}\n\n**WINNAAR:**\n{winner}"
+                    GameOverWin: "🎉🎉 Proficiat! {winner}, je won het Tic-Tac-Toe spel tegen {loser} 🎉🎉\n{bet}"
+                    GameOverTie: "GG! Het was een gelijkspel {player-1} en {player-2}!"
+                    Tie: "Gelijkspel"
+                    Bet: "{loser} heeft {winner} **{amount}** munten gegeven"
+            WaitForReactions: "*Wacht tot alle 9 reacties zijn toegevoegd...*"
+
+LogSystem:
+    ChannelCreated:
+        Author: "🛠️ Kanaal Gemaakt"
+        Description: "{type} kanaal `{channel}` aangemaakt\n**→ tijd:** <t:{time}:f>"
+    ChannelDeleted:
+        Author: "🗑️ Kanaal verwijderd"
+        Description: "{type} kanaal `{channel}` verwijderd\n**→ tijd:** <t:{time}:f>"
+    ChannelPinsUpdated:
+        Author: "📌 Pins bijgewerkt"
+        Description: "Bericht vastgepind in {channel}\n**→ tijd:** <t:{time}:f>"
+    ChannelUpdated:
+        NameUpdated:
+            Author: "✏️ Kanaal bijgewerkt"
+            Description: "Kanaal {channel} hernoemd \n**→ oud:** {old}\n**→ nieuw:** {new}\n**→ tijd:** <t:{time}:f>"
+        PermsUpdated:
+            Author: "✏️ Kanaal bijgewerkt"
+            Description: "Toestemmingen voor {channel} bijgewerkt\n**→ tijd:** <t:{time}:f>"
+        ParentUpdated:
+            Author: "✏️ Kanaal bijgewerkt"
+            Description: "Categorie voor {channel} bijgewerkt\n**→ oud:** {old}\n**→ nieuw:** {new}\n**→ tijd:** <t:{time}:f>"
+        TopicUpdated:
+            Author: "✏️ Kanaal bijgewerkt"
+            Description: "Onderwerp voor {channel} bijgewerkt\n**→ oud:** {old}\n**→ nieuw:** {new}\n**→ tijd:** <t:{time}:f>"
+    UserRolesUpdated:
+        RoleAdded:
+            Author: "➕ Rol toegevoegd"
+            Description: "{role} toegevoegd aan {user}\n**→ tijd:** <t:{time}:f>"
+        RoleRemoved:
+            Author: "➖ Rol verwijderd"
+            Description: "{role} verwijderd uit {user}\n**→ tijd:** <t:{time}:f>"
+    DisplaynameUpdated:
+        Author: "📛 Display Naam Veranderd"
+        Description: "{user}'s bijnaam veranderd\n**→ oud:** {old}\n**→ nieuw:** {new}\n**→ tijd:** <t:{time}:f>"
+    MessageDeleted:
+        Author: "🗑️ Bericht verwijderd"
+        Description: "Bericht door {user} verwijderd in {channel}\n**→ tijd:** <t:{time}:f>"
+        Message:
+            Long: "\n**→ bericht:** [Klik hier]({paste})"
+            Content: "\n**→ bericht:** {content}"
+            NoContent: "\n**→ bericht:** geen inhoud" 
+        Attachments: "\n**→ bijlagen:** {attachments}"
+    MessagesBulkDeleted:
+        Author: "🗑️ Berichten verwijderd"
+        Description: "**→ kanaal:** {channel}\n**→ tijd:** <t:{time}:f>\n**→ berichten:**\n{messages}"
+        TooLong: "Een logboek van de verwijderde berichten kan hier worden bekeken: {paste}"
+        Attachment: "**bijlagen:** [Klik hier]({url})"
+    MessageUpdated:
+        Author: "📝 Bericht bijgewerkt"
+        Description: "[Bericht]({message-url}) door {user} bewerkt\n**→ oud:**```{old}```\n**→ nieuw:**```{new}```\n**→ tijd:** <t:{time}:f>"
+    CommandLogs:
+        Author: "Commando gebruikt"
+        Fields: 
+            - "Uitvoerder"
+            - "Commando"
+            - "Bericht"
+    EmojiCreated:
+        Author: "Emoji Gemaakt"
+        Description: "{emoji}:\n**→ Naam:** {name}\n**→ id:** {id}\n**→ tijd:** <t:{time}:f>"
+    EmojiDeleted:
+        Author: "Emoji Verwijderd"
+        Description: "Emoji `{name}` deleted:\n**→ afbeelding:** [klik hier]({image})\n**→ id:** {id}\n**→ tijd:** <t:{time}:f>"
+    EmojiUpdated:
+        Author: "Emoji Bijgewerkt"
+        Description: "Emoji {emoji} hernoemd \n**→ oud:** {old}\n**→ nieuw:** {name}\n**→ tijd:** <t:{time}:f>"
+    MemberBoosted:
+        Author: "Lid Boosted"
+        Description: "{member} heeft de server versterkt\n**→ tijd:** <t:{time}:f>"
+    RoleCreated:
+        Author: "Rol gecreëerd"
+        Description: "Rol {role} gecreëerd\n**→ tijd:** <t:{time}:f>"
+    RoleDeleted:
+        Author: "Rol verwijderd"
+        Description: "Rol `{role}` verwijderd\n**→ tijd:** <t:{time}:f>"
+    RoleUpdated:
+        Author: "Rol bijgewerkt"
+        Description: 
+            - "{role}: "
+            - "naam bijgewerkt\n**→ oud:** {old}\n**→ nieuw:** {new}"
+            - "kleur bijgewerkt\n**→ oud:** {old}\n**→ nieuw:** {new}"
+            - "hoist instelling bijgewerkt\n**→ oud:** {old}\n**→ nieuw:** {new}"
+            - "vermelding instelling bijgewerkt\n**→ oud:** {old}\n**→ nieuw:** {new}"
+            - "machtigingen bijgewerkt\n**→ oud:** {old}\n**→ nieuw:** {new}"
+            - "\n**→ tijd:** <t:{time}:f>"
+        Previously: "**Voorheen:** "
+        Currently: "**Momenteel:** "
+        Mentionable: "Noemenswaardig"
+        NotMentionable: "Niet Noemenswaardig"
+        Hoisted: "Hoisted"
+        NotHoisted: "Niet Hoisted"
+    DMs:
+        Author: "📬 Nieuw direct bericht"
+        Description: "{user} berichtte de bot:\n\n{content}{attachments}\n**→ tijd:** <t:{time}:f>"
+        Attachements: "\n\n**→ bijlagen:** {attachments}"
+    CustomButtonUsed:
+        Author: "🖱️ Knop gebruikt"
+        Description: "Knop `{id}` werd gebruikt door {user}\n**→ [bericht]({message-url})**\n**→ knoplabel:** {label}\n**→ user id:** {user-id}\n**→ tijd:** <t:{time}:f>\n{actions}"
+        Actions: "**→ voltooide acties:**\n{actions}"
+
+EmbedPresets:
+    NoPerms:
+        Title: "Geen toestemming."
+        Description: 
+            - "Je hebt geen toestemming om dit commando uit te voeren."
+            - "Je moet de {role} rol hebben om dit commando uit te voeren."
+            - "U moet een van de volgende rollen hebben om dit commando uit te voeren: {roles}"
+    InvalidArgs:
+        Title: "Ongeldige Argumenten"
+        Description: "**Gebruik:** `{usage}`"
+    Error:
+        Title: "Foutmelding"
+        Descriptions: 
+            - "Er is een fout opgetreden."
+            - "**Gebruik:** `{usage}`"
+    Console:
+        Title: "Er is een fout opgetreden tijdens het uitvoeren van dit commando. Controleer de console."
+
+Other:
+    InviteRewardsMessage: "Je hebt {invites} gehaald, dus je hebt de {role} rol gekregen!"
+    VerifiedRoleNotFound: "De ingestelde geverifieerde rol is niet gevonden, daarom kon ik deze niet aan u geven. Neem contact op met een beheerder."
+    NormalMessageInCommandsChannel: "Je kunt alleen commando's in dit kanaal uitvoeren"
+    AlreadyVerified: "U bent al geverifieerd"
+    RoleMenuRoleNotCreated: "De `{role}` optie's overeenkomstige rol is niet aangemaakt. Neem contact op met een server admin"
+    SlashCommandUsedInDM: "Slash commando's kunnen niet gebruikt worden in DM's!"
+    DisabledCommand: "Dit commando is momenteel uitgeschakeld"
+    BugReportStatusChanged:
+        Pending: "Uw bug report is teruggezet naar pending"
+        Other: "Uw bug report is {status}"
+        Reason: "Reden"
+    SuggestionStatusChanged:
+        Pending: "Uw suggestie is teruggezet naar pending"
+        Other: "Uw suggestie is {status}"
+        Reason: "Reden"
+    NotCommandsChannel:
+        Title: "🚫 Verkeerde kanaal!"
+        Descriptions:
+            - "U kunt alleen commando's uitvoeren in {channels}"
+            - "U kunt dit commando alleen uitvoeren in {channel}"
+    Cooldown:
+        Title: ":hourglass_flowing_sand: Het {command} commando is aan het afkoelen. Even geduld a.u.b. Nog {time}!"
+    InvalidCommand:
+        Title: "Ongeldig commando"
+        Description: "Bedoelde je het `{command}` commando?"
+    Time:
+        Day: "{days} dag"
+        Days: "{days} dagen"
+        Hour: "{hours} uur"
+        Hours: "{hours} uren"
+        Minute: "{minutes} minuut"
+        Minutes: "{minutes} minuten"
+        Second: "{seconds} seconde"
+        Seconds: "{seconds} seconden"
+        About: "Over "
+        LessThan: "Minder dan "
+    OtherCommands:
+        Avatar:
+            Title: "👤 {tag}'s profielfoto "
+        Google:
+            Title: "🔍 Google Zoeken"
+            Field:
+                Name: "Zoeken op Google naar `{search}`..."
+                Value: "[klik hier]({link})"
+            Description: "Bovenste zoekresultaten tonen voor `{search}`:\n{results}"
+        Invites:
+            Title: "Uitnodiging tellen"
+            Description: "{user} heeft **{amount}** {form} uitgenodigd op deze Discord server!\n(`{regular}` regular, `{bonus}` bonus, `{leaves}` leaves, `{fake}` fake)"
+            People: "people"
+            Person: "person"
+        Invitetop:
+            Title: "Uitnodigen Leaderboard (Pagina {current-page}/{max-pages})"
+            Footer: "Totaal aantal uitnodigingen: {total}"
+            NoInvites: "Er zijn momenteel geen uitnodigingsgegevens voor deze server"
+            Format: "**{position}.** {user} - {amount} {invite-word} (`{regular}` normaal , `{bonus}` bonus, `{leaves}` leaves, `{fake}` nep)"
+            Invites:
+                Plural: "uitnodigingen"
+                Singular: "uitnodiging"
+        Boosters:
+            Title: "Nitro Boosters (Pagina {current-page}/{max-pages})"
+            Footer: "Total Boosts: {total}"
+            NoBoosts: "Er zijn momenteel geen boosts voor deze server"
+        Ping:
+            Title: "📶 Bot Ping"
+            Thumbnail: "https://cdn.discordapp.com/attachments/637105382631669760/640387847840464932/ping.png"
+            Fields: 
+                - "API Latency"
+                - "Bot Latency"
+        Prefix:
+            Title: "Voorvoegsel"
+            Description: "Mijn voorvoegsels in deze server zijn:\n{prefixes}"
+        Roleinfo:
+            Title: "Role Info"
+            Fields: 
+                - "Gemaakt op"
+                - "Positie"
+                - "Toestemmingen"
+                - "Leden [{amount}]"
+            Footer: "Rol ID: {id}"
+        Serverinfo:
+            Fields:
+                - "Eigenaar"
+                - "Gemaakt op"
+                - Name: "Aantal leden"
+                  Value: "{humans} mensen | {bots} bots | {total} totaal"
+                - "Regio"
+                - "Tekst Kanalen [{amount}]"
+                - "Rollen [{amount}]"
+                - "Emojis [{amount}]"
+            More: " en meer..."
+        Userinfo:
+            Title: "Gebruikers info"
+            Fields:
+                - "Gebruiker"
+                - "ID"
+                - "Geregistreerd"
+                - "Aangesloten"
+                - "Hoogste Toestemming"
+                - "Rollen"
+                - Name: "Other"
+                  Value: "Server Eigenaar"
+        Profile:
+            Title: "👤 Profile"
+            Description: "{bars} **{percent}%** naar Niveau {next_level}"
+            Fields:
+                - ":coin: Munten"
+                - ":bar_chart: Level"
+                - ":sparkles: Experience"
+                - "📩 Verzonden berichten"
+                - "🔊 Spreektijd"
+        Msgtop:
+            UnknownUser: "Onbekend"
+            LeaderboardEmpty: "Het klassement is momenteel leeg omdat niemand berichten heeft gestuurd!"
+            Format: "**{pos}.** ``{message_count}`` berichten - {user}"
+        VCTop:
+            UnknownUser: "Onbekend"
+            LeaderboardEmpty: "Het klassement is momenteel leeg omdat niemand tijd in een spraakkanaal heeft doorgebracht!"
+            Format: "**{pos}.** ``{time}`` - {user}"
+        ChannelInfo:
+            Title: 
+                - "🔊 Informatie spraakkanaal"
+                - "📁 Categorie Kanaal Informatie"
+                - "💬 Tekst Kanaal Informatie"
+                - "📰 Informatie nieuwskanalen"
+                - "🎙️ Informatie podiumkanaal"
+            Fields:
+                - "Kanaal"
+                - "ID"
+                - "Gemaakt op"
+                - "Toegestane rollen"
+                - "Toegestane Gebruikers"
+                - "Tijdelijk Kanaal Eigenaar"
+                - "Bitrate"
+                - "Gebruikerslimiet"
+                - "nakomelingen"
+                - "NSFW Channel?"
+                - "Onderwerp"
+        Invite:
+            Created:
+                Title: "🔗 Uitnodiging Aangemaakt"
+                Description: "De uitnodiging is gemaakt voor {channel}\n> **Uitnodiging link:** {invite}"
+            Error: "De uitnodiging kon niet worden gemaakt voor {channel}"
+            ThisChannel: "dit kanaal"
